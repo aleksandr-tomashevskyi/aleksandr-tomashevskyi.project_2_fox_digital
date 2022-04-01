@@ -36,6 +36,8 @@ h3{
    line-height: 22px;
 }
 .buttons{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 22px;
    cursor: pointer;
 }
 .page-block-container{
@@ -115,12 +117,10 @@ h3{
             width: 70%;
             border-radius: 7px;
             background: #fff;
-            font-family: 'Montserrat', sans-serif;
             color: #060606;
-            font-weight: 500;
-            font-size: 20px;
             text-align: center;
             padding: 29px 0;
+            font-weight: 500;
          }
       }
       .page-block-column_right{
@@ -248,7 +248,6 @@ h3{
    .page-block-row{
       display: inline-flex;
       margin: 7% 0;
-      border: solid red;
       .page-block-column_left{
          margin-left: 10%;
          flex: 0 1 40.5%;
@@ -266,19 +265,55 @@ h3{
          }
          form{
             li{
-               margin: 70px 0;
+               margin: 50px 0;
                input{
                   width: 70%;
                   height: 80px;
                   border-radius: 15px;
+                  font-size: 20px;
+                  font-family: inherit;
+                  padding-left: 30px;
+               }
+               .buttons{
+                  width: 60%;
+                  padding: 30px 0;
+                  font-size: 24px;
+                  line-height: 24px;
+                  border-radius: 15px;
+                  background-color: #0085FF;
+                  color: #ffff;
+                  text-align: center;
+                  font-weight: 500;
+                  letter-spacing: 0.05em;
+                  span::after{
+                     content: url(../img/icon_telegram.png);
+                     margin-left: 40px;
+                     position: relative;
+                     top: 4px;
+                  }
                }
             }
          }
       }
       .page-block-column_middle{
          flex: 0 0 1%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
          margin: 0 10px 0 150px;
-         border: solid red;
+         input{
+            margin: 4px 0;
+            appearance: none;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #999;
+            transition: 0.1s all linear;
+            outline: none;
+         }
+         input:checked {
+            border: 6px solid #fff;
+          }
       }
       .page-block-column_right{
          margin-right: 5%;

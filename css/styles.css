@@ -47,6 +47,8 @@ h3 {
 }
 
 .buttons {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
   cursor: pointer;
 }
 
@@ -174,12 +176,10 @@ h3 {
   width: 70%;
   border-radius: 7px;
   background: #fff;
-  font-family: 'Montserrat', sans-serif;
   color: #060606;
-  font-weight: 500;
-  font-size: 20px;
   text-align: center;
   padding: 29px 0;
+  font-weight: 500;
 }
 
 .main-screen .page-block-row .page-block-column_right {
@@ -372,7 +372,6 @@ h3 {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 7% 0;
-  border: solid red;
 }
 
 .our-projects .page-block-row .page-block-column_left {
@@ -398,21 +397,71 @@ h3 {
 }
 
 .our-projects .page-block-row .page-block-column_left form li {
-  margin: 70px 0;
+  margin: 50px 0;
 }
 
 .our-projects .page-block-row .page-block-column_left form li input {
   width: 70%;
   height: 80px;
   border-radius: 15px;
+  font-size: 20px;
+  font-family: inherit;
+  padding-left: 30px;
+}
+
+.our-projects .page-block-row .page-block-column_left form li .buttons {
+  width: 60%;
+  padding: 30px 0;
+  font-size: 24px;
+  line-height: 24px;
+  border-radius: 15px;
+  background-color: #0085FF;
+  color: #ffff;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.our-projects .page-block-row .page-block-column_left form li .buttons span::after {
+  content: url(../img/icon_telegram.png);
+  margin-left: 40px;
+  position: relative;
+  top: 4px;
 }
 
 .our-projects .page-block-row .page-block-column_middle {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1%;
           flex: 0 0 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 10px 0 150px;
-  border: solid red;
+}
+
+.our-projects .page-block-row .page-block-column_middle input {
+  margin: 4px 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #999;
+  -webkit-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+  outline: none;
+}
+
+.our-projects .page-block-row .page-block-column_middle input:checked {
+  border: 6px solid #fff;
 }
 
 .our-projects .page-block-row .page-block-column_right {
