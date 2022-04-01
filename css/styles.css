@@ -1,5 +1,10 @@
 @import url(null.css);
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@700&family=Raleway:wght@500&display=swap");
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,8 +19,8 @@
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 75px;
+  line-height: 75px;
 }
 
 h3 {
@@ -28,14 +33,14 @@ h3 {
 
 .descriptions {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .sub-descriptions {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   opacity: 70%;
   line-height: 22px;
@@ -115,7 +120,7 @@ h3 {
 
 .main-screen .header .header-menu .header-menu__item {
   display: inline;
-  font-size: 18px;
+  font-size: 24px;
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
@@ -145,17 +150,17 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 8vh;
+  margin-top: 8%;
 }
 
 .main-screen .page-block-row .page-block-column_left {
-  padding-right: -4vw;
+  padding-right: -7%;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
 }
 
-.main-screen .page-block-row .page-block-column_left .main-screen__header {
+.main-screen .page-block-row .page-block-column_left h2 {
   color: #fff;
   margin-bottom: 6%;
 }
@@ -179,9 +184,9 @@ h3 {
 
 .main-screen .page-block-row .page-block-column_right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  margin-left: 4vw;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+  margin-left: 7%;
   margin-right: -20%;
 }
 
@@ -238,6 +243,7 @@ h3 {
 
 .achievements .descriptions {
   font-weight: 500;
+  line-height: 39px;
 }
 
 .achievements .page-block-row {
@@ -297,7 +303,7 @@ h3 {
 }
 
 .achievements .page-block-row .page-block-column_top .page-block-column__container {
-  width: 90%;
+  max-width: 450px;
 }
 
 .achievements .page-block-row .page-block-column_top .descriptions {
@@ -314,10 +320,11 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 450px;
 }
 
 .achievements .page-block-row .page-block-column_bottom .page-block-column__container {
-  width: 65%;
+  max-width: 450px;
 }
 
 .achievements .page-block-row .page-block-column_bottom .descriptions {
@@ -339,17 +346,85 @@ h3 {
 }
 
 .achievements .page-block-column_bottom:nth-child(1) {
-  margin-right: 7%;
+  margin-right: 10%;
   position: relative;
   right: -5%;
 }
 
 .achievements .page-block-column_bottom:nth-child(2) {
-  padding-left: -7%;
+  padding-left: -10%;
   position: relative;
   right: 5%;
 }
 
 .achievements .page-block-row:first-child {
   margin-bottom: 87px;
+}
+
+.our-projects {
+  background: url(../img/picture_projects_page_background_dark.png);
+  background-size: cover;
+  margin-top: 7%;
+}
+
+.our-projects .page-block-row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 7% 0;
+  border: solid red;
+}
+
+.our-projects .page-block-row .page-block-column_left {
+  margin-left: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40.5%;
+          flex: 0 1 40.5%;
+}
+
+.our-projects .page-block-row .page-block-column_left h2 {
+  color: #fff;
+  margin-bottom: 6%;
+}
+
+.our-projects .page-block-row .page-block-column_left h3 {
+  color: #FFFFFF;
+  margin-bottom: 3%;
+}
+
+.our-projects .page-block-row .page-block-column_left p {
+  color: #fff;
+  margin-bottom: 6%;
+}
+
+.our-projects .page-block-row .page-block-column_left form li {
+  margin: 70px 0;
+}
+
+.our-projects .page-block-row .page-block-column_left form li input {
+  width: 70%;
+  height: 80px;
+  border-radius: 15px;
+}
+
+.our-projects .page-block-row .page-block-column_middle {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1%;
+          flex: 0 0 1%;
+  margin: 0 10px 0 150px;
+  border: solid red;
+}
+
+.our-projects .page-block-row .page-block-column_right {
+  margin-right: 5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 59.5%;
+          flex: 0 1 59.5%;
+}
+
+.our-projects .page-block-row .page-block-column_right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
