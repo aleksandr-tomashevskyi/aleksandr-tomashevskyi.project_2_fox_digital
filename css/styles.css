@@ -362,20 +362,22 @@ h3 {
 }
 
 .our-projects {
-  background: url(../img/picture_projects_page_background_dark.png);
-  background-size: cover;
-  margin-top: 7%;
+  margin-top: 5%;
+  max-height: 1100px;
+  overflow: hidden;
+  padding: 2% 0;
 }
 
 .our-projects .page-block-row {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 7% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(../img/picture_projects_page_background_dark.png);
+  background-size: cover;
 }
 
 .our-projects .page-block-row .page-block-column_left {
-  margin-left: 10%;
+  margin: 5% 0 5% 10%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40.5%;
           flex: 0 1 40.5%;
@@ -401,7 +403,7 @@ h3 {
 }
 
 .our-projects .page-block-row .page-block-column_left form li input {
-  width: 70%;
+  width: 80%;
   height: 80px;
   border-radius: 15px;
   font-size: 20px;
@@ -410,7 +412,7 @@ h3 {
 }
 
 .our-projects .page-block-row .page-block-column_left form li .buttons {
-  width: 60%;
+  width: 70%;
   padding: 30px 0;
   font-size: 24px;
   line-height: 24px;
@@ -424,7 +426,7 @@ h3 {
 
 .our-projects .page-block-row .page-block-column_left form li .buttons span::after {
   content: url(../img/icon_telegram.png);
-  margin-left: 40px;
+  margin-left: 30px;
   position: relative;
   top: 4px;
 }
@@ -454,14 +456,15 @@ h3 {
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  border: 2px solid #999;
+  border: 3px solid #999;
   -webkit-transition: 0.1s all linear;
   transition: 0.1s all linear;
   outline: none;
 }
 
 .our-projects .page-block-row .page-block-column_middle input:checked {
-  border: 6px solid #fff;
+  border: 3px solid #fff;
+  background-color: #fff;
 }
 
 .our-projects .page-block-row .page-block-column_right {
@@ -469,11 +472,24 @@ h3 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 59.5%;
           flex: 0 1 59.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .our-projects .page-block-row .page-block-column_right img {
   width: 100%;
-  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.our-projects .page-block-row .page-block-column_right .inactive {
+  display: none;
 }
