@@ -20,8 +20,19 @@ let currentSelection;
 radioKeys.forEach(function(item, i){
    if (item.checked){
       currentSelection = i;
-      // toggling appropriate image according to checked button
-      // imagesCollectionValues[i].classList.toggle("active");
+      // toggling appropriate images according to checked button
+      if(i == 0){
+         imagesCollectionValues[i].classList.add("active");
+            // imagesCollectionValues[4].classList.add("active-top");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+      } else if(i == 4){
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i-1].classList.add("active-top");
+      } else {
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+      }
    }
 })
 console.log(currentSelection);
@@ -37,7 +48,6 @@ function showConsole(){
             })
             // setting up new state
             imagesCollectionValues[i].classList.add("active");
-            // imagesCollectionValues[4].classList.add("active-top");
             imagesCollectionValues[i+1].classList.add("active-bottom");
             console.log("this code is running 1");
             // remembering new selection

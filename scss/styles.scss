@@ -246,12 +246,12 @@ h3{
 .our-projects{
    margin: 5% 0;
    overflow: hidden; //preventing showing pictures out of required zone
-   padding: 2% 0; // setting white zone over and under backround image
-   box-shadow: 5px -10px 10px rgba(221, 219, 219, 0.40), 5px 10px 10px rgba(221, 219, 219, 0.40);
+   box-shadow: 0 -5px 10px rgba(221, 219, 219, 0.90), 0 5px 10px rgba(221, 219, 219, 0.90);
    .page-block-row{
       display: flex;
       background: url(../img/picture_projects_page_background_dark.png);
       background-size: cover;
+      align-items: center;
       .page-block-column_left{
          margin: 5% 0 5% 10%;
          flex: 0 1 40.5%;
@@ -314,7 +314,7 @@ h3{
             border-radius: 50%;
             width: 12px;
             height: 12px;
-            border: 3px solid #999;
+            border: 2px solid #999;
             transition: 0.1s all linear;
             outline: none;
          }
@@ -324,35 +324,44 @@ h3{
           }
       }
       .page-block-column_right{
+         height: fit-content;
          margin-right: 1%;
          flex: 0 1 59.5%;
-         display: flex;
+         display: inline-flex;
          flex-direction: column;
          justify-content: center;
          position: relative;
          img{
             width: 100%;
             object-fit: contain;
+         }
+         div{
+            width: 100%;
             display: none;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
          }
          .active{
             display: block;
+            position: absolute;
             z-index: 2;
          }
          .active-top{
             display: block;
             position: absolute;
             transform: scale(90%);
-            top: 10px;
-            left: 70px;
+            bottom: 50px;
+            left: 100px;
             z-index: 1;
+
          }
          .active-bottom{
             display: block;
             position: absolute;
             transform: scale(90%);
-            top: 600px;
-            left: 70px;
+            top: 50px;
+            left: 100px;
             z-index: 1;
          }
       }
