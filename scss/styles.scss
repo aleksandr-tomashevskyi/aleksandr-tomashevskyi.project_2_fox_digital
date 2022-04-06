@@ -55,9 +55,48 @@ h3{
    color: #FCFCFC;
    font-size: 46px;
    font-weight: 600;
+   box-shadow: 5px 7px 5px #7c7c7c;
    img{
       margin-top: 4px;
       width: 26px;
+   }
+}
+.service-rectangles{
+   position: relative;
+   width: 160px;
+   height: 90px;
+   background-color: #1F7CE3;
+   border-radius: 5px;
+   margin: 0 auto;
+   img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+}
+.tail{
+   width: 80px;
+   height: 10px;
+   background-color: #1F7CE3;
+   border-radius: 5px;
+}
+.arrow{
+   position: relative;
+   float: right;
+   .leg{
+      position: absolute;
+      width: 40px;
+      height: 10px;
+      background-color: #1F7CE3;
+      border-radius: 4px;
+   }
+   .upper{
+      transform: translate(46px, -22px) rotate(45deg);
+   }
+   .lower{
+      transform: translate(46px, 2px) rotate(-45deg);
    }
 }
 .main-screen{
@@ -180,13 +219,11 @@ h3{
          width: 150px;
          height: 120px;
          margin-bottom: 30px;
-         box-shadow: 5px 7px 5px #7c7c7c;
       }
       .rectangle_big{
          width: 220px;
          height: 120px;
          margin-bottom: 30px;
-         box-shadow: 5px 7px 5px #7c7c7c;
       }
       .page-block-column__container{
          display: flex;
@@ -222,7 +259,7 @@ h3{
       margin-right: 7%;
    }
    .page-block-column_top:nth-child(2){
-      padding: -7%;
+      padding: 0 -7%;
       position: relative;
       top: -15px;
    }
@@ -232,19 +269,17 @@ h3{
    .page-block-column_bottom:nth-child(1){
       margin-right: 10%;
       position: relative;
-      right: -5%;
    }
    .page-block-column_bottom:nth-child(2){
       padding-left: -10%;
       position: relative;
-      right: 5%;
    }
    .page-block-row:first-child{
       margin-bottom: 87px;
    }
 }
 .our-projects{
-   margin: 5% 0;
+   margin: 5% 0; //needed for edge shadows
    overflow: hidden; //preventing showing pictures out of required zone
    box-shadow: 0 -5px 10px rgba(221, 219, 219, 0.90), 0 5px 10px rgba(221, 219, 219, 0.90);
    .page-block-row{
@@ -287,13 +322,13 @@ h3{
                   font-size: 24px;
                   line-height: 24px;
                   border-radius: 15px;
-                  background-color: #0085FF;
+                  background: linear-gradient(to right, #2549A6, #0085FF);
                   color: #ffff;
                   text-align: center;
                   font-weight: 500;
                   letter-spacing: 0.05em;
                   span::after{
-                     content: url(../img/icon_telegram.png);
+                     content: url(../icons/icon_telegram.png);
                      margin-left: 30px;
                      position: relative;
                      top: 4px;
@@ -367,7 +402,68 @@ h3{
       }
    }
 }
-.next-block{
-   margin-top: 7%;
-   height: 500px;
+.services{
+   margin-top: 2%;
+   .page-block-row__headings{
+      .page-block-column_left{
+         width: 50%;
+         margin-left: 10%;
+         h3{
+            margin-bottom: 3%;
+         }
+         h2{
+            margin-bottom: 5%;
+            background: linear-gradient(to right, #2549A6, #0085FF);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+         }
+         p{
+            margin-bottom: 8%;
+         }
+      }
+   }
+   .page-block-row__cards{
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      .row-hatched-line{
+         display: flex;
+         width: 100%;
+         position: absolute;
+         top: 40px;
+         flex: 1;
+         justify-content: space-evenly;
+         .dash{
+            height: 10px;
+            width: 4%;
+            background-color: #1F7CE3;
+            border-radius: 5px;
+            margin: 0 0.5%;
+            flex: 0 1 auto;
+         }
+         .dash:last-child{
+            margin-right: 10px;
+         }
+      }
+      .page-block-column{
+         flex: 0 1 23.75%;
+         text-align: center;
+         p{
+            margin: 0 5%;
+         }
+         .descriptions{
+            margin: 3% 0 4% 0;
+            font-weight: 500;
+            line-height: 39px;
+         }
+      }
+      .page-block-column:last-child{
+         margin-right: 5%;
+      }
+   }
+   .page-block-row__decorative-line{
+      width: 80%;
+      margin: 5% auto;
+      border: solid #1F7CE3 1px;
+   }
 }
