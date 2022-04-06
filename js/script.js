@@ -2,14 +2,14 @@
 // how to read: comments on top, actions below
 console.log('hello world!')
 // getting block with radio buttons
-const radioSwitcherBlock = document.querySelector(".page-block-column_middle");
+const radioSwitcherBlock = document.querySelector(".section-column_middle");
 // getting collection of objects of radio buttons
 const radioSwitcherCollection = radioSwitcherBlock.children;
 console.log(radioSwitcherCollection, typeof(radioSwitcherCollection));
 // getting values of each radio button (accessing)
 const radioKeys = Object.values(radioSwitcherCollection);
 // getting colection of objects of images stored in right block
-const imagesCollection = document.querySelector(".our-projects .page-block-column_right").children;
+const imagesCollection = document.querySelector(".our-projects .section-column_right").children;
 console.log(imagesCollection);
 // accesing each image in the object and storing it in a collections
 const imagesCollectionValues = Object.values(imagesCollection);
