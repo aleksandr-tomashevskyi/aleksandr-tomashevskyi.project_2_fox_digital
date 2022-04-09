@@ -205,23 +205,23 @@ h3 {
   margin-top: 8%;
 }
 
-.main-screen .section-row .section-column_left {
+.main-screen .section-row .section-column_left, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_middle, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_right, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_right {
   padding-right: -7%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 30%;
           flex: 1 0 30%;
 }
 
-.main-screen .section-row .section-column_left h2 {
+.main-screen .section-row .section-column_left h2, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_middle h2, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_middle h2, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_right h2, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_right h2 {
   color: #fff;
   margin-bottom: 6%;
 }
 
-.main-screen .section-row .section-column_left .main-screen__description {
+.main-screen .section-row .section-column_left .main-screen__description, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_middle .main-screen__description, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_middle .main-screen__description, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_right .main-screen__description, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_right .main-screen__description {
   color: #fff;
 }
 
-.main-screen .section-row .section-column_left .section-column__button {
+.main-screen .section-row .section-column_left .section-column__button, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_middle .section-column__button, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_middle .section-column__button, .main-screen .section-row .eye-tracking .section-row__cards-container .section-column_right .section-column__button, .eye-tracking .section-row__cards-container .main-screen .section-row .section-column_right .section-column__button {
   margin-top: 8%;
   width: 70%;
   border-radius: 7px;
@@ -256,14 +256,14 @@ h3 {
   margin-top: 7%;
 }
 
-.about .section-column_left {
+.about .section-column_left, .about .eye-tracking .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .about .section-column_middle, .about .eye-tracking .section-row__cards-container .section-column_right, .eye-tracking .section-row__cards-container .about .section-column_right {
   margin-right: 7%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-.about .section-column_left img {
+.about .section-column_left img, .about .eye-tracking .section-row__cards-container .section-column_middle img, .eye-tracking .section-row__cards-container .about .section-column_middle img, .about .eye-tracking .section-row__cards-container .section-column_right img, .eye-tracking .section-row__cards-container .about .section-column_right img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -427,7 +427,7 @@ h3 {
           align-items: center;
 }
 
-.our-projects .section-row .section-column_left {
+.our-projects .section-row .section-column_left, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right {
   margin: 5% 0 5% 10%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40.5%;
@@ -444,26 +444,26 @@ h3 {
           justify-content: center;
 }
 
-.our-projects .section-row .section-column_left h2 {
+.our-projects .section-row .section-column_left h2, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle h2, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle h2, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right h2, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right h2 {
   color: #fff;
   margin-bottom: 6%;
 }
 
-.our-projects .section-row .section-column_left h3 {
+.our-projects .section-row .section-column_left h3, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle h3, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle h3, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right h3, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right h3 {
   color: #FFFFFF;
   margin-bottom: 3%;
 }
 
-.our-projects .section-row .section-column_left p {
+.our-projects .section-row .section-column_left p, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle p, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle p, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right p, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right p {
   color: #fff;
   margin-bottom: 6%;
 }
 
-.our-projects .section-row .section-column_left form li {
+.our-projects .section-row .section-column_left form li, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle form li, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle form li, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right form li, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right form li {
   margin: 50px 0;
 }
 
-.our-projects .section-row .section-column_left form li input {
+.our-projects .section-row .section-column_left form li input, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle form li input, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle form li input, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right form li input, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right form li input {
   width: 80%;
   height: 80px;
   border-radius: 15px;
@@ -472,7 +472,7 @@ h3 {
   padding-left: 30px;
 }
 
-.our-projects .section-row .section-column_left form li .buttons {
+.our-projects .section-row .section-column_left form li .buttons, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle form li .buttons, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle form li .buttons, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right form li .buttons, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right form li .buttons {
   width: 70%;
   padding: 30px 0;
   font-size: 24px;
@@ -486,7 +486,7 @@ h3 {
   letter-spacing: 0.05em;
 }
 
-.our-projects .section-row .section-column_left form li .buttons span::after {
+.our-projects .section-row .section-column_left form li .buttons span::after, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_middle form li .buttons span::after, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_middle form li .buttons span::after, .our-projects .section-row .eye-tracking .section-row__cards-container .section-column_right form li .buttons span::after, .eye-tracking .section-row__cards-container .our-projects .section-row .section-column_right form li .buttons span::after {
   content: url(../icons/icon_telegram.png);
   margin-left: 30px;
   position: relative;
@@ -595,16 +595,16 @@ h3 {
   margin-top: 2%;
 }
 
-.services .section-row__headings .section-column_left {
+.services .section-row__headings .section-column_left, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_middle, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_right, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_right {
   width: 50%;
   margin-left: 10%;
 }
 
-.services .section-row__headings .section-column_left h3 {
+.services .section-row__headings .section-column_left h3, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_middle h3, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_middle h3, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_right h3, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_right h3 {
   margin-bottom: 3%;
 }
 
-.services .section-row__headings .section-column_left h2 {
+.services .section-row__headings .section-column_left h2, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_middle h2, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_middle h2, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_right h2, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_right h2 {
   margin-bottom: 5%;
   background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
   background: linear-gradient(to right, #2549A6, #0085FF);
@@ -612,7 +612,7 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-.services .section-row__headings .section-column_left p {
+.services .section-row__headings .section-column_left p, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_middle p, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_middle p, .services .section-row__headings .eye-tracking .section-row__cards-container .section-column_right p, .eye-tracking .section-row__cards-container .services .section-row__headings .section-column_right p {
   margin-bottom: 8%;
 }
 
@@ -677,13 +677,13 @@ h3 {
   margin-right: 5%;
 }
 
-.services .section-row__decorative-line {
+.services .section-row__decoration-line {
   width: 80%;
   margin: 5% auto;
   border: solid #1F7CE3 1px;
 }
 
-.eye-tracking .section-row {
+.eye-tracking .section-row__video-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,42 +692,46 @@ h3 {
           justify-content: space-between;
 }
 
-.eye-tracking .section-row .section-column_left {
+.eye-tracking .section-row__video-container .section-column_left, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_middle, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_right, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 47%;
-          flex: 0 1 47%;
+      -ms-flex: 0 1 57%;
+          flex: 0 1 57%;
   margin: 0 4% 0 5%;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.eye-tracking .section-row .section-column_left .video-container {
+.eye-tracking .section-row__video-container .section-column_left .video-container, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_middle .video-container, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_middle .video-container, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_right .video-container, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_right .video-container {
   width: 100%;
+  min-width: 500px;
   overflow: hidden;
   border-radius: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
-.eye-tracking .section-row .section-column_left .video-container video {
+.eye-tracking .section-row__video-container .section-column_left .video-container video, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_middle .video-container video, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_middle .video-container video, .eye-tracking .section-row__video-container .section-row__cards-container .section-column_right .video-container video, .eye-tracking .section-row__cards-container .section-row__video-container .section-column_right .video-container video {
   width: 100%;
 }
 
-.eye-tracking .section-row .section-column_right {
+.eye-tracking .section-row__video-container .section-column_right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   padding-left: -4%;
-  margin-right: 5%;
+  margin-right: 15%;
 }
 
-.eye-tracking .section-row .section-column_right h3 {
+.eye-tracking .section-row__video-container .section-column_right h3 {
   margin-bottom: 3%;
 }
 
-.eye-tracking .section-row .section-column_right h2 {
+.eye-tracking .section-row__video-container .section-column_right h2 {
   margin-bottom: 5%;
   background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
   background: linear-gradient(to right, #2549A6, #0085FF);
@@ -735,8 +739,86 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-.eye-tracking .section-row .section-column_right p {
+.eye-tracking .section-row__video-container .section-column_right p {
   margin-bottom: 8%;
+}
+
+.eye-tracking .section-row__cards-container {
+  width: 90%;
+  margin: 7% auto;
+  position: relative;
+}
+
+.eye-tracking .section-row__cards-container .section-row__decoration-block {
+  width: 66.666%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: solid grey 3px;
+  border-left: none;
+}
+
+.eye-tracking .section-row__cards-container .eye-tracking-cards {
+  min-width: 300px;
+  height: 260px;
+  margin: 2%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eye-tracking .section-row__cards-container .eye-tracking-cards p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.eye-tracking .section-row__cards-container .eye-tracking-cards .stage {
+  text-align: right;
+  margin: 5%;
+}
+
+.eye-tracking .section-row__cards-container .eye-tracking-cards .card-description {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+}
+
+.eye-tracking .section-row__cards-container .eye-tracking-cards img {
+  position: absolute;
+  right: 5%;
+  bottom: -8%;
+}
+
+.eye-tracking .section-row__cards-container .blue-card {
+  background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
+  background: linear-gradient(to right, #2549A6, #0085FF);
+  color: #fff;
+}
+
+.eye-tracking .section-row__cards-container .white-card {
+  -webkit-box-shadow: 5px 10px 10px 0px gray;
+          box-shadow: 5px 10px 10px 0px gray;
+  background: #fff;
+}
+
+.eye-tracking .section-row__cards-container .cards-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.eye-tracking .section-row__cards-container .section-column_left, .eye-tracking .section-row__cards-container .section-column_middle, .eye-tracking .section-row__cards-container .section-column_right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
 }
 
 .new-block {
