@@ -573,7 +573,72 @@ h3{
       }
    }
 }
-.new-block{
+.our-clients{
    margin-top: 10%;
-   height: 500px;
+   .section-row-headings{
+      text-align: center   ;
+      h3{
+         margin-bottom: 2vh;
+      }
+      h2{
+         margin-bottom: 15vh;
+         background: linear-gradient(to right, #2549A6, #0085FF);
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }
+   .section-row-clients-cards{
+      padding-bottom: 100px;
+      background: url(../img/picture_background_footer.png);
+      background-size: cover;
+      .client-cards-container{
+         width: 80%;
+         margin: 0 auto;
+         position: relative;
+         top: -40px;
+         .cards__row{
+            display: flex;
+            justify-content: space-around;
+            border: solid blue;
+            .client-cards-column{
+            flex: 0 0 29%;
+            margin: 0 auto;
+            display: flex;
+            border: solid red;
+               .client-card{
+                  flex: 1 0 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;
+                  margin: 0 auto;
+                  min-width: 250px;
+                  max-width: 350px;
+                  height: 20vh;
+                  border-radius: 15px;
+                  background-color: #fff;
+                  box-shadow: 6px -3px 10px 1px rgba(0, 0, 0, 0.3);
+                  border: solid yellow;
+                  img{
+                     flex: 0 1 90%;
+                     width: 100%;
+                     height: 100%;
+                     margin: 0 5%;
+                     object-fit: scale-down;
+                  }
+                  .tatneft{
+                     position: relative;
+                     top: -10%;
+                  }
+               }
+            }
+            .client-cards-column:nth-child(2){
+               margin: 0 2%;
+            }
+         }
+         .cards__row:nth-child(2){
+            margin: 2vh 0;
+         }
+      }
+   }
 }
