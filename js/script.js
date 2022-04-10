@@ -38,7 +38,7 @@ radioKeys.forEach(function(item, i){
 console.log(currentSelection);
 console.log(imagesCollectionValues);
 // initializing function for toggling appropriate classes to img after user choses another button
-function showConsole(){
+function sliderChange(){
    radioKeys.forEach(function(item, i){
       if (item.checked){
          if (i == 0){
@@ -82,6 +82,30 @@ function showConsole(){
 radioSwitcherBlock.addEventListener("click", function(event){
    // checking if the button was clicked or another area of the block
    if(event.target.closest('input')){
-      showConsole()
+      sliderChange(); //calling main function for slider
    }
+});
+
+const footerAuditForm = document.querySelector(".section-row-audit-form");
+const footerSection = document.querySelector(".footer-section");
+
+console.log('this is the form: ', footerAuditForm)
+function showForm(){
+   footerAuditForm.style.display = "block";
+   footerSection.scrollIntoView({block: 'start', behavior: 'smooth'});
+   console.log('it works!');
+   console.log(event);
+}
+function hideForm(){
+   footerAuditForm.style.display = "none";
+   footerSection.scrollIntoView({block: 'end', behavior: 'smooth'});
+   console.log('it works!');
+   console.log(event);
+}
+footerSection.addEventListener('mouseenter', function(event){
+   showForm();
+});
+
+footerSection.addEventListener('mouseleave', function(event){
+   hideForm();
 });

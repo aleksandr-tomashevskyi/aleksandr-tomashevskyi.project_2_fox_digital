@@ -107,7 +107,7 @@
                   <h3>Наши проекты</h3>
                   <h2>Приведем клиентов в ваш бизнес</h2>
                   <p class="descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения</p>
-                  <form action="/forms/client_form_info.xml" method="post">
+                  <form class="audit-form" action="/forms/client_form_info.xml" method="post">
                      <ul>
                         <li>
                            <input type="text" id="name" name="user_name" placeholder="Ваше имя">
@@ -116,7 +116,7 @@
                            <input type="tel" id="name" name="user_name" placeholder="Телефон">
                         </li>
                         <li>
-                           <div class="buttons"><span>Заказать аудит</span></div>
+                           <div class="audit-button buttons"><span>Заказать аудит</span></div>
                         </li>
                      </ul>
                   </form>
@@ -273,57 +273,59 @@
       <div class="section-row-clients-cards">
          <div class="client-cards-container">
             <div class="cards__row">
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-hundai.png" alt="">
                   </div>
-               </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img class="tatneft" src="./icons/icon-tatneft.png" alt="">
                   </div>
-               </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-harrat.png" alt="">
                   </div>
-               </div>
             </div>
             <div class="cards__row">
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-pic.png" alt="">
                   </div>
-            </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-sun-development.png" alt="">
                   </div>
-               </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-agency.png" alt="">
                   </div>
-               </div>
             </div>
             <div class="cards__row">
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-top-dog.png" alt="">
                   </div>
-               </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-marais.png" alt="">
                   </div>
-               </div>
-               <div class="client-cards-column">
                   <div class="client-card">
                      <img src="./icons/icon-alreze.png" alt="">
                   </div>
-               </div>
             </div>
          </div>
+      </div>
+      </section>
+      <section class="footer-section">
+      <div class="section-container">
+         <div class="section-row-audit-form" style="display: none;">
+            <h2>Оставьте заявку</h2>
+            <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
+            <form class="audit-form" action="/forms/client_form_info.xml" method="post">
+                     <input type="text" id="name" name="user_name" placeholder="Ваше имя">
+                     <input type="tel" id="name" name="user_name" placeholder="Телефон">
+                     <div class="audit-button buttons"><span>Заказать аудит</span></div>
+            </form>
+         </div>
+            <footer>
+               <img src="./img/picture_logo_footer.png" alt="">
+               <div class="creator-info">
+                  <p class="sub-descriptions">Created by: Oleksandr Tomashevskyi</p>
+                  <p class="sub-descriptions">oleksandr.o.tomashevskyi@gmail.com</p>
+               </div>
+            </footer>
       </div>
    </section>
 </div>
