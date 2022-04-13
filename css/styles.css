@@ -148,6 +148,10 @@ h3 {
           transform: translate(46px, 2px) rotate(-45deg);
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .main-screen {
   background: url(../img/picture_main_page_background_dark.png);
   background-size: cover;
