@@ -10,30 +10,28 @@
 <body>
    <div class="wrapper">
          <section class="main-screen">
-            <div class="section-container">
                <div class="header">
                   <div class="header__logo"><img src="./img/picture_logo.svg" alt="ooops, logo picture didn't load"></div>
-                  <ul class="header-menu">
-                     <li class="header-menu__item">Главная</li>
-                     <li class="header-menu__item">О нас</li>
-                     <li class="header-menu__item">Наши проекты</li>
-                     <li class="header-menu__item">Наши Услуги</li>
-                     <li class="header-menu__item">Eye-tracking</li>
-                  </ul>
+                  <div class="nav-list">
+                     <a href="#" class="nav-list__item">Главная</a>
+                     <a href="#about" class="nav-list__item">О нас</a>
+                     <a href="#our-projects" class="nav-list__item">Наши проекты</a>
+                     <a href="#services" class="nav-list__item">Наши Услуги</a>
+                     <a href="#eye-tracking" class="nav-list__item">Eye-tracking</a>
+                  </div>
                </div>
                <div class="section-row">
                   <div class="section-column_left">
                      <h2>Приведем клиентов в ваш бизнес</h2>
-                     <p class="main-screen__description descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения. Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения</p>
+                     <p class="descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения.</p>
                      <div class="section-column__button buttons">Оставить заявку</div>
                   </div>
                   <div class="section-column_right">
                      <img src="./img/picture_main_column_right_dark.png" alt="aghh... here must be a picture actually...">
                   </div>
                </div>
-            </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
          <div class="section-column_left">
             <img src="./img/pirture_about_column_left.png" alt="picture must be here">
          </div>
@@ -101,24 +99,16 @@
             </div>
          </div>
       </section>
-      <section class="our-projects">
+      <section class="our-projects" id="our-projects">
             <div class="section-row">
                <div class="section-column_left">
                   <h3>Наши проекты</h3>
                   <h2>Приведем клиентов в ваш бизнес</h2>
                   <p class="descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения</p>
                   <form class="audit-form" action="/forms/client_form_info.xml" method="post">
-                     <ul>
-                        <li>
                            <input type="text" id="name" name="user_name" placeholder="Ваше имя">
-                        </li>
-                        <li>
                            <input type="tel" id="name" name="user_name" placeholder="Телефон">
-                        </li>
-                        <li>
                            <div class="audit-button buttons"><span>Заказать аудит</span></div>
-                        </li>
-                     </ul>
                   </form>
                </div>
                <div class="section-column_middle">
@@ -137,7 +127,7 @@
                </div>
             </div>
       </section>
-   <section class="services">
+   <section class="services" id="services">
       <!-- row for headings -->
       <div class="section-row__headings">
          <div class="section-column_left">
@@ -172,37 +162,45 @@
             </div>
          </div>
          <div class="section-column">
-               <div class="service-rectangles strategy-rectangle">
-                  <img src="./icons/icon-strategy.png" alt="">
+               <div class="section-column__container">
+                  <div class="service-rectangles strategy-rectangle">
+                     <img src="./icons/icon-strategy.png" alt="">
+                  </div>
+                  <p class="descriptions">Разработка стратегии</p>
+                  <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
                </div>
-               <p class="descriptions">Разработка стратегии</p>
-               <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
          </div>
          <div class="section-column">
-               <div class="service-rectangles design-rectangle">
-                  <img src="./icons/icon-design.png" alt="">
+               <div class="section-column__container">
+                  <div class="service-rectangles design-rectangle">
+                     <img src="./icons/icon-design.png" alt="">
+                  </div>
+                  <p class="descriptions">Дизайн</p>
+                  <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
                </div>
-               <p class="descriptions">Дизайн</p>
-               <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
          </div>
          <div class="section-column">
-               <div class="service-rectangles layout-rectangle">
-                  <img src="./icons/icon-layout.png" alt="">
+               <div class="section-column__container">
+                  <div class="service-rectangles layout-rectangle">
+                     <img src="./icons/icon-layout.png" alt="">
+                  </div>
+                  <p class="descriptions">Верстка</p>
+                  <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
                </div>
-               <p class="descriptions">Верстка</p>
-               <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
          </div>
          <div class="section-column">
-               <div class="service-rectangles eyetraking-rectangle">
-                  <img src="./icons/icon-eyetracking.png" alt="">
+               <div class="section-column__container">
+                  <div class="service-rectangles eyetraking-rectangle">
+                     <img src="./icons/icon-eyetracking.png" alt="">
+                  </div>
+                  <p class="descriptions">Eye tracking</p>
+                  <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
                </div>
-               <p class="descriptions">Eye tracking</p>
-               <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть </p>
          </div>
       </div>
       <div class="section-row__decoration-line"></div>
    </section>
-   <section class="eye-tracking">
+   <section class="eye-tracking" id="eye-tracking">
       <div class="section-row__video-container">
          <div class="section-column_left">
             <div class="video-container">
@@ -218,21 +216,21 @@
       <div class="section-row__cards-container">
          <div class="section-row__decoration-block"></div>
          <div class="cards-row cards-row_top">
-            <div class="section-column_left">
+            <div class="section-column">
                <div class="eye-tracking-cards blue-card">
                   <p class="stage">Этап 1</p>
                   <p class="card-description">Сбор респондентов</p>
                   <img src="./icons/icon-card-stage1.png" alt="">
                </div>
             </div>
-            <div class="section-column_middle">
+            <div class="section-column">
                <div class="eye-tracking-cards white-card">
                   <p class="stage">Этап 2</p>
                   <p class="card-description">Анализ и создание плана тестирования</p>
                   <img src="./icons/icon-card-stage2.png" alt="">
                </div>
             </div>
-            <div class="section-column_right">
+            <div class="section-column">
                <div class="eye-tracking-cards blue-card">
                   <p class="stage">Этап 3</p>
                   <p class="card-description">Тестирование сайта</p>
@@ -241,21 +239,21 @@
             </div>
          </div>
          <div class="cards-row cards-row_bottom">
-            <div class="section-column_left">
+            <div class="section-column">
                <div class="eye-tracking-cards white-card">
                   <p class="stage">Этап 6</p>
                   <p class="card-description">Сайт с подтвержденной эффективностью</p>
                   <img src="./icons/icon-card-stage6.png" alt="">
                </div>
             </div>
-            <div class="section-column_middle">
+            <div class="section-column">
                <div class="eye-tracking-cards blue-card">
                   <p class="stage">Этап 5</p>
                   <p class="card-description">Корректировки на основе тестирования</p>
                   <img src="./icons/icon-card-stage5.png" alt="">
                </div>
             </div>
-            <div class="section-column_right">
+            <div class="section-column">
                <div class="eye-tracking-cards white-card">
                   <p class="stage">Этап 4</p>
                   <p class="card-description">Анализ тепловой карты</p>

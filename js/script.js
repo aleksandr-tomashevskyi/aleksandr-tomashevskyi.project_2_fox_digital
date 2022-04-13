@@ -94,13 +94,11 @@ function showForm(){
    footerAuditForm.style.display = "block";
    footerSection.scrollIntoView({block: 'start', behavior: 'smooth'});
    console.log('it works!');
-   console.log(event);
 }
 function hideForm(){
    footerAuditForm.style.display = "none";
    footerSection.scrollIntoView({block: 'end', behavior: 'smooth'});
-   console.log('it works!');
-   console.log(event);
+   console.log('it works again!');
 }
 footerSection.addEventListener('mouseenter', function(event){
    showForm();
