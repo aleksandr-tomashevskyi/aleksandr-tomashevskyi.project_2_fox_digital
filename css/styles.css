@@ -877,9 +877,6 @@ a:hover {
 }
 
 .our-clients .section-row-clients-cards .client-cards-container .cards__row .client-card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -891,10 +888,9 @@ a:hover {
           align-items: center;
   position: relative;
   margin: 0 auto;
-  min-width: 250px;
-  max-width: 300px;
-  height: 250px;
-  border-radius: 15px;
+  width: 21vw;
+  height: 15vw;
+  border-radius: 0.78vw;
   background-color: #fff;
   -webkit-box-shadow: 6px -3px 10px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 6px -3px 10px 1px rgba(0, 0, 0, 0.3);
