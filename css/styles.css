@@ -90,7 +90,7 @@ h3 {
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   color: #FCFCFC;
-  font-size: 46px;
+  font-size: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320)));
   font-weight: 600;
   -webkit-box-shadow: 5px 7px 5px #7c7c7c;
           box-shadow: 5px 7px 5px #7c7c7c;
@@ -338,14 +338,14 @@ a:hover {
 }
 
 .achievements .section-container .section-row .rectangle_small {
-  width: 5em;
-  height: 3.5em;
+  width: 4em;
+  height: 2.8em;
   margin-bottom: 30px;
 }
 
 .achievements .section-container .section-row .rectangle_big {
-  width: 6em;
-  height: 3.5em;
+  width: 5em;
+  height: 2.8em;
   margin-bottom: 30px;
 }
 
@@ -525,6 +525,10 @@ a:hover {
   background-color: #fff;
 }
 
+.our-projects .section-row .section-column_middle input:hover {
+  cursor: pointer;
+}
+
 .our-projects .section-row .section-column_right {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -602,10 +606,7 @@ a:hover {
 
 .services .section-row__headings .section-column_left h2 {
   margin-bottom: 1.2em;
-  background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
-  background: linear-gradient(to right, #2549A6, #0085FF);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #2549A6;
 }
 
 .services .section-row__headings .section-column_left p {
@@ -730,10 +731,7 @@ a:hover {
 
 .eye-tracking .section-row__video-container .section-column_right h2 {
   margin-bottom: 1.2em;
-  background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
-  background: linear-gradient(to right, #2549A6, #0085FF);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #2549A6;
 }
 
 .eye-tracking .section-row__video-container .section-column_right p {
@@ -849,10 +847,7 @@ a:hover {
 
 .our-clients .section-row-headings h2 {
   margin-bottom: 15vh;
-  background: -webkit-gradient(linear, left top, right top, from(#2549A6), to(#0085FF));
-  background: linear-gradient(to right, #2549A6, #0085FF);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #2549A6;
 }
 
 .our-clients .section-row-clients-cards {
@@ -897,8 +892,8 @@ a:hover {
 }
 
 .our-clients .section-row-clients-cards .client-cards-container .cards__row .client-card img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   margin: 0 5%;
   -o-object-fit: scale-down;
      object-fit: scale-down;

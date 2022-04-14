@@ -4,6 +4,7 @@
 
 //Calculation of used fonts for adaptive design
 $seventyFiveToThirtyPx: calc(30px + (75 - 30)*((100vw - 320px) / (1920 - 320))); //75px to 30px
+$fourtySixToTventyEightPx: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320))); //75px to 30px
 $twentySixToEighteenPx: calc(18px + (26 - 18)*((100vw - 320px) / (1920 - 320))); //26px to 18px
 $twentySixToTwelvePx: calc(12px + (26 - 12)*((100vw - 320px) / (1920 - 320))); //26px to 18px
 $twentyToFefteenPx: calc(15px + (22 - 15)*((100vw - 320px) / (1920 - 320))); //20px to 15px
@@ -75,7 +76,7 @@ h3{
    border-radius: 5px;
    font-family: 'Montserrat', sans-serif;
    color: #FCFCFC;
-   font-size: 46px; //calculated from parent normal font size 46px
+   font-size: $fourtySixToTventyEightPx; //calculated from parent normal font size 46px
    font-weight: 600;
    box-shadow: 5px 7px 5px #7c7c7c;
    img{
@@ -253,13 +254,13 @@ a:hover{
             text-align: center;
          }
          .rectangle_small{
-            width: 5em; // from 46px
-            height: 3.5em;
+            width: 4em; // from 46px
+            height: 2.8em;
             margin-bottom: 30px;
          }
          .rectangle_big{
-            width: 6em;
-            height: 3.5em;
+            width: 5em;
+            height: 2.8em;
             margin-bottom: 30px;
          }
          .section-column__container{
@@ -365,6 +366,9 @@ a:hover{
             border: 0.04em solid #fff;
             background-color: #fff;
           }
+         input:hover{
+            cursor: pointer;
+         }
       }
       .section-column_right{
          height: fit-content;
@@ -421,9 +425,7 @@ a:hover{
          }
          h2{
             margin-bottom: 1.2em;
-            background: linear-gradient(to right, #2549A6, #0085FF);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #2549A6;
          }
          p{
             margin-bottom: 3.85em;
@@ -522,9 +524,7 @@ a:hover{
          }
          h2{
             margin-bottom: 1.2em;
-            background: linear-gradient(to right, #2549A6, #0085FF);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #2549A6;
          }
          p{
             margin-bottom: 8%;
@@ -610,9 +610,7 @@ a:hover{
       }
       h2{
          margin-bottom: 15vh;
-         background: linear-gradient(to right, #2549A6, #0085FF);
-         background-clip: text;
-         -webkit-text-fill-color: transparent;
+         color: #2549A6;
       }
    }
    .section-row-clients-cards{
@@ -639,8 +637,8 @@ a:hover{
                background-color: #fff;
                box-shadow: 6px -3px 10px 1px rgba(0, 0, 0, 0.3);
                img{
-                  width: 100%;
-                  height: 100%;
+                  width: 80%;
+                  height: 80%;
                   margin: 0 5%;
                   object-fit: scale-down;
                }
