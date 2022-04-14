@@ -85,10 +85,10 @@ h3{
    }
 }
 .service-rectangles{
-   // font-size: $eighteenToTwelvePx; //needed for adaptivity, 18px
+   font-size: $fourtySixToTventyEightPx; //needed for adaptivity, 46 to 28
    position: relative;
-   width: 160px;
-   height: 90px;
+   width: 4em;
+   height: 2.2em;
    background-color: #1F7CE3;
    border-radius: 5px;
    margin: 0 auto;
@@ -123,10 +123,23 @@ h3{
       transform: translate(46px, 2px) rotate(-45deg);
    }
 }
-a:hover{
-   text-decoration: underline;
+a{
+   position: relative;
 }
-// Global elements block 
+// a:hover{
+//    text-decoration: underline;
+//    }
+.arrow-down{
+   position: absolute;
+   border: solid #fff;
+   border-width: 0 3px 3px 0;
+   padding: 3px;
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   top: 120%;
+   left: 50%;
+ }
+// Global elements block end
 
 //media querries block start
 
@@ -385,7 +398,7 @@ a:hover{
          div{
             width: 100%;
             display: none;
-            border-radius: 30px;
+            border-radius: 1.6vw;
             overflow: hidden;
             box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
          }
@@ -438,10 +451,11 @@ a:hover{
       justify-content: space-evenly;
       position: relative;
       .row-hatched-line{
+         font-size: $fourtySixToTventyEightPx; //needed for adaprive margin of decorative line
          display: flex;
          width: 100%;
          position: absolute;
-         top: 40px;
+         top: 0.87em;
          flex: 1;
          justify-content: space-evenly;
          .dash{
@@ -476,7 +490,8 @@ a:hover{
    .section-row__decoration-line{
       width: 80%;
       margin: 5% auto;
-      border: solid #1F7CE3 1px;
+      height: 1px;
+      background-color: #1F7CE3;
    }
 }
 //eye-tracking section including media

@@ -102,9 +102,10 @@ h3 {
 }
 
 .service-rectangles {
+  font-size: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320)));
   position: relative;
-  width: 160px;
-  height: 90px;
+  width: 4em;
+  height: 2.2em;
   background-color: #1F7CE3;
   border-radius: 5px;
   margin: 0 auto;
@@ -148,8 +149,19 @@ h3 {
           transform: translate(46px, 2px) rotate(-45deg);
 }
 
-a:hover {
-  text-decoration: underline;
+a {
+  position: relative;
+}
+
+.arrow-down {
+  position: absolute;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  top: 120%;
+  left: 50%;
 }
 
 .main-screen {
@@ -559,7 +571,7 @@ a:hover {
 .our-projects .section-row .section-column_right div {
   width: 100%;
   display: none;
-  border-radius: 30px;
+  border-radius: 1.6vw;
   overflow: hidden;
   -webkit-box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
           box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
@@ -625,12 +637,13 @@ a:hover {
 }
 
 .services .section-row__cards .row-hatched-line {
+  font-size: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320)));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   position: absolute;
-  top: 40px;
+  top: 0.87em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -679,7 +692,8 @@ a:hover {
 .services .section-row__decoration-line {
   width: 80%;
   margin: 5% auto;
-  border: solid #1F7CE3 1px;
+  height: 1px;
+  background-color: #1F7CE3;
 }
 
 .eye-tracking .section-row__video-container {
