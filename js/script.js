@@ -12,7 +12,7 @@ console.log(radioSwitcherCollection, typeof(radioSwitcherCollection));
 // getting values of each radio button (accessing)
 const radioKeys = Object.values(radioSwitcherCollection);
 // getting colection of objects of images stored in right block
-const imagesCollection = document.querySelector(".our-projects .section-column_right").children;
+const imagesCollection = document.querySelector(".our-projects .section-column_right .slider-block").children;
 console.log('getting imagesCollection - succesfull');
 // accesing each image in the object and storing it in a collections
 const imagesCollectionValues = Object.values(imagesCollection);
@@ -26,55 +26,111 @@ radioKeys.forEach(function(item, i){
       // toggling appropriate images according to checked button
       if(i == 0){
          imagesCollectionValues[i].classList.add("active");
-            // imagesCollectionValues[4].classList.add("active-top");
          imagesCollectionValues[i+1].classList.add("active-bottom");
-      } else if(i == 4){
-         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+2].classList.add("inactive-bottom");
+      } else if(i == (imagesCollectionValues.length-1)){ //remember! Length starts from 1, not 0
+         imagesCollectionValues[i-2].classList.add("inactive-top");
          imagesCollectionValues[i-1].classList.add("active-top");
-      } else {
          imagesCollectionValues[i].classList.add("active");
+      } else if(i == 1){
          imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[i+1].classList.add("active-bottom");
+         imagesCollectionValues[i+2].classList.add("inactive-bottom");
+      } else if(i == (imagesCollectionValues.length-2)){
+         console.log('check')
+         imagesCollectionValues[i-2].classList.add("inactive-top");
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+      } else{
+         imagesCollectionValues[i-2].classList.add("inactive-top");
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+         imagesCollectionValues[i+2].classList.add("inactive-bottom");
       }
    }
 })
 console.log('setting current selection after loading - succesful', 'current selection is:', currentSelection);
+console.log('length of collection: ', imagesCollectionValues.length)
+//function for removing classes
+function removeCurrentClasses(){
+   if(currentSelection == 0){
+      imagesCollectionValues[currentSelection].classList.remove("active");
+      imagesCollectionValues[currentSelection+1].classList.remove("active-bottom");
+      imagesCollectionValues[currentSelection+2].classList.remove("inactive-bottom");
+   } else if(currentSelection == (imagesCollectionValues.length-1)){
+      imagesCollectionValues[currentSelection-2].classList.remove("inactive-top");
+      imagesCollectionValues[currentSelection-1].classList.remove("active-top");
+      imagesCollectionValues[currentSelection].classList.remove("active");
+   } else if(currentSelection == 1){
+      imagesCollectionValues[currentSelection-1].classList.remove("active-top");
+      imagesCollectionValues[currentSelection].classList.remove("active");
+      imagesCollectionValues[currentSelection+1].classList.remove("active-bottom");
+      imagesCollectionValues[currentSelection+2].classList.remove("inactive-bottom");
+   } else if(currentSelection == (imagesCollectionValues.length-2)){
+      imagesCollectionValues[currentSelection-2].classList.remove("inactive-top");
+      imagesCollectionValues[currentSelection-1].classList.remove("active-top");
+      imagesCollectionValues[currentSelection].classList.remove("active");
+      imagesCollectionValues[currentSelection+1].classList.remove("active-bottom");
+   } else{
+      imagesCollectionValues[currentSelection-2].classList.remove("inactive-top");
+      imagesCollectionValues[currentSelection-1].classList.remove("active-top");
+      imagesCollectionValues[currentSelection].classList.remove("active");
+      imagesCollectionValues[currentSelection+1].classList.remove("active-bottom");
+      imagesCollectionValues[currentSelection+2].classList.remove("inactive-bottom");
+   }
+}
 // initializing function for toggling appropriate classes to img after user choses another button
 function sliderChange(){
    radioKeys.forEach(function(item, i){ //cycle for checking which particular button was checked
       if (item.checked){
          if (i == 0){
             // getting rid of classes in previous state
-            imagesCollectionValues.forEach(function(item){
-               item.removeAttribute("class");
-            })
+            removeCurrentClasses();
             // setting up new state
             imagesCollectionValues[i].classList.add("active");
             imagesCollectionValues[i+1].classList.add("active-bottom");
+            imagesCollectionValues[i+2].classList.add("inactive-bottom");
             console.log("code for 'zero' section initialized");
             // remembering new selection
             currentSelection = i;
-      } else if(i == 4){
+      } else if(i == (imagesCollectionValues.length-1)){
          // getting rid of classes in previous state
-         imagesCollectionValues.forEach(function(item){
-            item.removeAttribute("class");
-         })
-         imagesCollectionValues[i].classList.add("active");
+         removeCurrentClasses();
+         imagesCollectionValues[i-2].classList.add("inactive-top");
          imagesCollectionValues[i-1].classList.add("active-top");
-         // imagesCollectionValues[0].classList.add("active-top");
-         console.log("code for 'in between' section initialized");
-         currentSelection = i;
-      } else {
-         // getting rid of classes in previous state
-         imagesCollectionValues.forEach(function(item){
-            item.removeAttribute("class");
-         });
-         // setting up new state
          imagesCollectionValues[i].classList.add("active");
-         imagesCollectionValues[i-1].classList.add("active-top");
-         imagesCollectionValues[i+1].classList.add("active-bottom");
          console.log("code for 'end' section initialized");
-         // remembering new selection
+         console.log("new selection is: ", i);
+         currentSelection = i;
+      } else if(i == 1){
+         removeCurrentClasses();
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+         imagesCollectionValues[i+2].classList.add("inactive-bottom");
+         console.log("new selection is: ", i);
+         currentSelection = i;
+      } else if(i == (imagesCollectionValues.length-2)){
+         removeCurrentClasses();
+         imagesCollectionValues[i-2].classList.add("inactive-top");
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+         console.log("new selection is: ", i);
+         currentSelection = i;
+      }
+      else {
+         removeCurrentClasses();
+         imagesCollectionValues[i-2].classList.add("inactive-top");
+         imagesCollectionValues[i-1].classList.add("active-top");
+         imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[i+1].classList.add("active-bottom");
+         imagesCollectionValues[i+2].classList.add("inactive-bottom");
+         console.log("code for 'middle' section initialized");
+         console.log("new selection is: ", i);
          currentSelection = i;
       }
    };
@@ -159,7 +215,7 @@ document.querySelector(".nav-list").addEventListener('mouseover', showArrow);
 function showArrow(event){
    if(event.target.closest('.nav-list__item')){
       console.log(event.target.firstElementChild);
-      event.target.firstElementChild.style.display = "inline-block"
+      event.target.firstElementChild.classList.toggle("_active");
    }
 }
 // showing an arrow on links when mouse is out
@@ -167,7 +223,7 @@ document.querySelector(".nav-list").addEventListener('mouseout', hideArrow);
 function hideArrow(event){
    if(event.target.closest('.nav-list__item')){
       console.log(event.target.firstElementChild);
-      event.target.firstElementChild.style.display = "none"
+      event.target.firstElementChild.classList.toggle("_active");
    }
 }
 
