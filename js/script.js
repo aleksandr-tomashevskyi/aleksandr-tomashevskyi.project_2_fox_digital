@@ -17,6 +17,7 @@ console.log('getting imagesCollection - succesfull');
 // accesing each image in the object and storing it in a collections
 const imagesCollectionValues = Object.values(imagesCollection);
 console.log(imagesCollectionValues);
+console.log("This is radioKeys: ",radioKeys)
 // setting variable to store number of current checked button
 let currentSelection;
 // getting information about which button is checked after loading the page
@@ -144,6 +145,21 @@ radioSwitcherBlock.addEventListener("click", function(event){
    }
 });
 
+//    Automatic slide change code block start
+//initializing function to select next radio button
+function autoSlideChange(){
+   if(currentSelection < (imagesCollectionValues.length - 1)){
+   radioKeys[(currentSelection + 1)].checked = true;
+   sliderChange();
+   } else {
+      radioKeys[0].checked = true;
+      sliderChange();
+   }
+}
+//making time interval for automatic slide change
+setInterval(autoSlideChange, 4000);
+
+//    Automatic slide change code block end
 //slider code end
 
 //audit popup form code start
