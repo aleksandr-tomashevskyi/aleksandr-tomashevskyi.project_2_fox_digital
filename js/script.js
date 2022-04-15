@@ -26,6 +26,8 @@ radioKeys.forEach(function(item, i){
       currentSelection = i;
       // toggling appropriate images according to checked button
       if(i == 0){
+         imagesCollectionValues[imagesCollectionValues.length-2].classList.add("inactive-top");//for 'infinite' effect
+         imagesCollectionValues[imagesCollectionValues.length-1].classList.add("active-top"); //for 'infinite' effect
          imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[i+1].classList.add("active-bottom");
          imagesCollectionValues[i+2].classList.add("inactive-bottom");
@@ -33,6 +35,9 @@ radioKeys.forEach(function(item, i){
          imagesCollectionValues[i-2].classList.add("inactive-top");
          imagesCollectionValues[i-1].classList.add("active-top");
          imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[0].classList.add("active-bottom");//for 'infinite' effect
+         imagesCollectionValues[1].classList.add("inactive-bottom");//for 'infinite' effect
+
       } else if(i == 1){
          imagesCollectionValues[i-1].classList.add("active-top");
          imagesCollectionValues[i].classList.add("active");
@@ -58,6 +63,8 @@ console.log('length of collection: ', imagesCollectionValues.length)
 //function for removing classes
 function removeCurrentClasses(){
    if(currentSelection == 0){
+      imagesCollectionValues[imagesCollectionValues.length-2].classList.remove("inactive-top");//for 'infinite' effect
+      imagesCollectionValues[imagesCollectionValues.length-1].classList.remove("active-top");//for 'infinite' effect
       imagesCollectionValues[currentSelection].classList.remove("active");
       imagesCollectionValues[currentSelection+1].classList.remove("active-bottom");
       imagesCollectionValues[currentSelection+2].classList.remove("inactive-bottom");
@@ -65,6 +72,8 @@ function removeCurrentClasses(){
       imagesCollectionValues[currentSelection-2].classList.remove("inactive-top");
       imagesCollectionValues[currentSelection-1].classList.remove("active-top");
       imagesCollectionValues[currentSelection].classList.remove("active");
+      imagesCollectionValues[0].classList.remove("active-bottom");
+      imagesCollectionValues[1].classList.remove("inactive-bottom");//for 'infinite' effect
    } else if(currentSelection == 1){
       imagesCollectionValues[currentSelection-1].classList.remove("active-top");
       imagesCollectionValues[currentSelection].classList.remove("active");
@@ -91,6 +100,8 @@ function sliderChange(){
             // getting rid of classes in previous state
             removeCurrentClasses();
             // setting up new state
+            imagesCollectionValues[imagesCollectionValues.length-2].classList.add("inactive-top");//for 'infinite' effect
+            imagesCollectionValues[imagesCollectionValues.length-1].classList.add("active-top");//for 'infinite' effect
             imagesCollectionValues[i].classList.add("active");
             imagesCollectionValues[i+1].classList.add("active-bottom");
             imagesCollectionValues[i+2].classList.add("inactive-bottom");
@@ -103,6 +114,8 @@ function sliderChange(){
          imagesCollectionValues[i-2].classList.add("inactive-top");
          imagesCollectionValues[i-1].classList.add("active-top");
          imagesCollectionValues[i].classList.add("active");
+         imagesCollectionValues[0].classList.add("active-bottom");//for 'infinite' effect
+         imagesCollectionValues[1].classList.add("inactive-bottom");//for 'infinite' effect
          console.log("code for 'end' section initialized");
          console.log("new selection is: ", i);
          currentSelection = i;
