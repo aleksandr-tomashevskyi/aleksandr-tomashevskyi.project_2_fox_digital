@@ -567,7 +567,6 @@ a {
   border-radius: 1.6vw;
   -webkit-box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
           box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
-  pointer-events: none;
   position: absolute;
   top: 0vw;
   left: 0vw;
@@ -590,6 +589,7 @@ a {
   top: -18vw;
   left: 6vw;
   z-index: 1;
+  cursor: pointer;
   -webkit-transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
   transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
 }
@@ -608,6 +608,7 @@ a {
   top: 18vw;
   left: 6vw;
   z-index: 1;
+  cursor: pointer;
   -webkit-transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
   transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
 }

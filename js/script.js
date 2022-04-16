@@ -1,8 +1,9 @@
 "use strict"
 // how to read: comments on top, actions below
 
-console.log('hello world!')
-//slider code start
+console.log('hello world!');
+
+//       Slider code start
 
 // getting block with radio buttons
 const radioSwitcherBlock = document.querySelector(".section-column_middle");
@@ -12,7 +13,9 @@ console.log(radioSwitcherCollection, typeof(radioSwitcherCollection));
 // getting values of each radio button (accessing)
 const radioKeys = Object.values(radioSwitcherCollection);
 // getting colection of objects of images stored in right block
-const imagesCollection = document.querySelector(".our-projects .section-column_right .slider-block").children;
+const imagesCollectionBlock = document.querySelector(".our-projects .section-column_right .slider-block");
+console.log("This is the imagesCollectionBlock: ", imagesCollectionBlock);
+const imagesCollection = imagesCollectionBlock.children;
 console.log('getting imagesCollection - succesfull');
 // accesing each image in the object and storing it in a collections
 const imagesCollectionValues = Object.values(imagesCollection);
@@ -72,7 +75,7 @@ function removeCurrentClasses(){
       imagesCollectionValues[currentSelection-2].classList.remove("inactive-top");
       imagesCollectionValues[currentSelection-1].classList.remove("active-top");
       imagesCollectionValues[currentSelection].classList.remove("active");
-      imagesCollectionValues[0].classList.remove("active-bottom");
+      imagesCollectionValues[0].classList.remove("active-bottom");//for 'infinite' effect
       imagesCollectionValues[1].classList.remove("inactive-bottom");//for 'infinite' effect
    } else if(currentSelection == 1){
       imagesCollectionValues[currentSelection-1].classList.remove("active-top");
@@ -92,7 +95,7 @@ function removeCurrentClasses(){
       imagesCollectionValues[currentSelection+2].classList.remove("inactive-bottom");
    }
 }
-// initializing function for toggling appropriate classes to img after user choses another button
+// initializing function for toggling appropriate classes to img after user (or time interval function) choses another button
 function sliderChange(){
    radioKeys.forEach(function(item, i){ //cycle for checking which particular button was checked
       if (item.checked){
@@ -158,11 +161,36 @@ radioSwitcherBlock.addEventListener("click", function(event){
    }
 });
 
-//    Automatic slide change code block start
+//Code block for clickable top and bottom slide start
+// setting event listener for click on slide
+document.querySelector(".slider-block").addEventListener("click", function(event){
+   if(event.target.closest(".active-top")){
+      if(currentSelection == 0){
+         radioKeys[(imagesCollectionValues.length - 1)].checked = true;
+         sliderChange();
+      }
+       else{
+      radioKeys[(currentSelection - 1)].checked = true;
+      sliderChange();
+         }
+      } else if(event.target.closest(".active-bottom")){
+         if(currentSelection == (imagesCollectionValues.length - 1)){
+            radioKeys[0].checked = true;
+            sliderChange();
+         } else{
+      radioKeys[(currentSelection + 1)].checked = true;
+      sliderChange();
+      }
+   }
+});
+//Code block for clickable top and bottom slide end
+
+//Automatic slide change code block start
+
 //initializing function to select next radio button
 function autoSlideChange(){
-   if(currentSelection < (imagesCollectionValues.length - 1)){
-   radioKeys[(currentSelection + 1)].checked = true;
+   if(currentSelection < (imagesCollectionValues.length - 1)){ //checking whether we reached the end of collection
+   radioKeys[(currentSelection + 1)].checked = true; //checking next button
    sliderChange();
    } else {
       radioKeys[0].checked = true;
@@ -170,12 +198,12 @@ function autoSlideChange(){
    }
 }
 //making time interval for automatic slide change
-setInterval(autoSlideChange, 4000);
+setInterval(autoSlideChange, 8000);
 
-//    Automatic slide change code block end
-//slider code end
+//Automatic slide change code block end
+//          Slider code end
 
-//audit popup form code start
+//       Audit popup form code start
 
 const footerAuditForm = document.querySelector(".section-row-audit-form");
 const footerSection = document.querySelector(".footer-section");
@@ -197,9 +225,9 @@ footerSection.addEventListener('mouseleave', () => {
    hideForm();
 });
 
-//audit popup form code end
+//      Audit popup form code end
 
-//header links decoration code start
+//      Header links decoration code start
 const menuItemCollection = document.querySelectorAll(".nav-list__item[data-goto]");
 const sectionItemCollection = document.querySelectorAll("section");
 let navItemClickedVar;
@@ -213,7 +241,7 @@ let navItemClickedVar;
 // });
 // console.log(sectionItemCollection);
 
-// scroll to ancor function
+//scroll to ancor function
 
 function ancorScrollFunc(navItemClickedVar, event){
    console.log("here is the event: ", event)

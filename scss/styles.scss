@@ -399,7 +399,6 @@ a{
                opacity: 0;
                border-radius: 1.6vw;
                box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.7);
-               pointer-events: none;
                position: absolute;
                top: 0vw;
                left: 0vw;
@@ -418,10 +417,10 @@ a{
                top: -18vw;
                left: 6vw;
                z-index: 1;
+               cursor: pointer;
                transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
             }
             .inactive-top{
-               // opacity: 0;
                top: -30vw;
                left: 10vw;
                transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
@@ -432,10 +431,10 @@ a{
                top: 18vw;
                left: 6vw;
                z-index: 1;
+               cursor: pointer;
                transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
             }
             .inactive-bottom{
-               // opacity: 0;
                top: 30vw;
                left: 10vw;
                transition: left 0.5s, top 0.5s, scale 0.5s, opacity 0.5s;
