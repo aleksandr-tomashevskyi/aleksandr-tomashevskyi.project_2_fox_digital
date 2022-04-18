@@ -228,7 +228,7 @@ footerSection.addEventListener('mouseleave', () => {
 //      Audit popup form code end
 
 //      Header links decoration code start
-const menuItemCollection = document.querySelectorAll(".nav-list__item[data-goto]");
+const menuItemCollection = document.querySelectorAll(".navigation__link[data-goto]");
 const sectionItemCollection = document.querySelectorAll("section");
 let navItemClickedVar;
 // function getNavItemClicked(){
@@ -241,18 +241,20 @@ let navItemClickedVar;
 // });
 // console.log(sectionItemCollection);
 
-//scroll to ancor function
+//Scroll to ancor function
 
 function ancorScrollFunc(navItemClickedVar, event){
    console.log("here is the event: ", event)
    event.preventDefault();
    const ancorElement = document.querySelector(`${navItemClickedVar}`);
+   console.log("Element distance: ", ancorElement.offsetTop)
    console.log('Here is the ancor element: ', ancorElement);
-   ancorElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+   window.scrollTo({top: (`${ancorElement.offsetTop}` - 80), behavior: 'smooth'});
+   document.querySelector(".navigation__body").classList.remove("navigation__body_active");
 };
 
-document.querySelector(".nav-list").addEventListener('click', (event) => {
-   if(event.target.closest('.nav-list__item')){
+document.querySelector(".navigation__list-block").addEventListener('click', (event) => {
+   if(event.target.closest('.navigation__list-item')){
       navItemClickedVar = event.target.getAttribute('data-goto');
       console.log("Just checking the dataset function: ",event.target.dataset.goto)
       if(navItemClickedVar && document.querySelector(`${navItemClickedVar}`)){ //checking if the attribute has any value
@@ -268,19 +270,47 @@ document.querySelector(".nav-list").addEventListener('click', (event) => {
 // }
 
 // showing an arrow on links when mouse is over
-document.querySelector(".nav-list").addEventListener('mouseover', showArrow);
+document.querySelector(".navigation__list-block").addEventListener('mouseover', showArrow);
 function showArrow(event){
-   if(event.target.closest('.nav-list__item')){
-      console.log(event.target.firstElementChild);
+   if(event.target.closest('.navigation__list-item')){
       event.target.firstElementChild.classList.toggle("_active");
    }
 }
 // showing an arrow on links when mouse is out
-document.querySelector(".nav-list").addEventListener('mouseout', hideArrow);
+document.querySelector(".navigation__list-block").addEventListener('mouseout', hideArrow);
 function hideArrow(event){
-   if(event.target.closest('.nav-list__item')){
-      console.log(event.target.firstElementChild);
+   if(event.target.closest('.navigation__list-item')){
       event.target.firstElementChild.classList.toggle("_active");
    }
 }
+
+//       Header background color change after being scrolled
+const headerBlockItem = document.querySelector(".header");
+let lastKnownScrollPosition = window.pageYOffset;
+//function below needed to check scroll position after reload
+if(lastKnownScrollPosition == 0){ // checking if scroll position shifted from 0
+   headerBlockItem.classList.remove("header_active");
+}
+else{
+   headerBlockItem.classList.add("header_active");
+};
+console.log("Header BlockItem: ", headerBlockItem);
+console.log("Scroll: ", lastKnownScrollPosition);
+window.addEventListener("scroll", function(event){
+   lastKnownScrollPosition = window.pageYOffset;
+   if(lastKnownScrollPosition == 0){ // checking if scroll position shifted from 0
+      headerBlockItem.classList.remove("header_active");
+   }
+   else{
+      headerBlockItem.classList.add("header_active");
+   }
+})
+
+//    Navigation menu show\hide
+
+const menuIconBlock = document.querySelector(".navigation__icon");
+menuIconBlock.addEventListener("click", function(event){
+   document.querySelector(".navigation__body").classList.toggle("navigation__body_active");
+})
+
 

@@ -126,23 +126,6 @@ h3{
 a{
    position: relative;
 }
-.arrow-down{
-   display: inline-block;
-   opacity: 0;
-   position: absolute;
-   border: solid #fff;
-   border-width: 0 3px 3px 0;
-   padding: 3px;
-   transform: rotate(45deg);
-   -webkit-transform: rotate(45deg);
-   top: 90%;
-   left: 50%;
-   transition: top 0.5s ease 0s;
- }
- .arrow-down._active{
-   top: 120%;
-   opacity: 100%;
- }
 // Global elements block end
 
 //media querries block start
@@ -151,39 +134,153 @@ a{
 
 //media querries block end
 
+.header{
+   position: fixed;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   z-index: 10;
+   &_active{
+      background-color: rgba(8, 11, 21, 0.95);
+   }
+   .header__container{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      font-size: $twentyToFefteenPx; //original font-size 20px
+      padding: 1.2vh 0;
+   }
+   .logo{ 
+      flex: 1 1 10%;
+      height: 2.5em;
+      z-index: 12;
+      .logo__image{
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+   .navigation{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1 0 80%;
+      @media(max-width: 767px){
+         flex: 1;
+      }
+      }
+   .navigation__list-item{
+      display: inline;
+      margin: 0 0.5vw 0 0.5vw;
+      text-align: center;
+      align-items: center;
+      @media (max-width: 767px){
+         display: list-item;
+         font-size: $fourtySixToTventyEightPx;
+         margin: 4vh 0;
+         text-align: left;
+      }
+   }
+   .navigation__link{
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      position: relative;
+   }
+   .navigation__icon{
+      display: none;
+   }
+   .arrow-down{
+      display: inline-block;
+      opacity: 0;
+      position: absolute;
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      top: 90%;
+      left: 50%;
+      transition: top 0.5s ease 0s;
+      pointer-events: none;
+      @media(max-width: 767px){
+         border-width: 0 5px 5px 0;
+         padding: 5px;
+         top: 0%;
+         left: -30px;
+      }
+    }
+    .arrow-down._active{
+      top: 120%;
+      opacity: 100%;
+      pointer-events: none;
+      @media(max-width: 767px){
+         top: 30%;
+         left: -3 0px;
+      }
+    }
+   @media (max-width: 767px){
+   .navigation__list-block{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      // display: none;
+   }
+   .navigation__body{
+      @media (max-width: 767px){
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.96);
+         transition: top 0.3s ease 0s;
+         overflow: auto;
+         &.navigation__body_active{
+            top: 0;
+         }
+      }
+
+   }
+   .navigation__icon{
+      display: block;
+      position: relative;
+      z-index: 11;
+      display: block;
+      width: 30px;
+      height: 18px;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      span, &::after, &::before{
+         position: absolute;
+         left: 0;
+         height: 10%;
+         width: 100%;
+         background-color: #fff;
+      }
+      &::after, &::before{
+         content: "";
+      }
+      &::before{
+         top: 0;
+      }
+      &::after{
+         bottom: 0;
+      }
+      span{
+         position: absolute;
+         top: 50%;
+         transform: scale(1) translate(0px, -50%);
+      }
+   }
+   }
+}
+
 .main-screen{
    background: url(../img/picture_main_page_background_dark.png);
    background-size: cover;
-   .header{
-      display: flex;
-      justify-content: space-between;
-      margin: 2vh 10vw 2vh 10vw;
-      font-size: $twentyToFefteenPx; //original font-size 20px
-      .header__logo{
-         flex: 1 1 10%;
-         height: 3em;
-         img{
-            height: 100%;
-            object-fit: contain;
-         }
-      }
-      .nav-list{
-         display: flex;
-         justify-content: flex-end;
-         align-items: center;
-         flex: 1 0 auto;
-         .nav-list__item{
-            color: #fff;
-            font-family: 'Raleway', sans-serif;
-            margin: 0 1vw 0 1vw;
-         }
-         .nav-list__item:last-of-type{
-            margin-left: 1vw;
-         }
-      }
-   }
    .section-row{
       display: flex;
+      align-items: center;
       margin-top: 10vh;
       .section-column_left{
          padding-left: 10vw;
