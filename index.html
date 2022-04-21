@@ -17,19 +17,19 @@
                <nav class="navigation__body">
                   <ul class="navigation__list-block">
                      <li class="navigation__list-item">
-                        <a class="navigation__link" data-goto="" href="#">Главная<i class="arrow-down"></i></a>
+                        <a class="navigation__link" data-goto=".main-screen" href="#">Главная<i class="navigation__arrow"></i></a>
                      </li>
                      <li class="navigation__list-item">
-                        <a class="navigation__link" data-goto=".about" href="#">О нас<i class="arrow-down"></i></a>
+                        <a class="navigation__link" data-goto=".about" href="#">О нас<i class="navigation__arrow"></i></a>
                      </li>
                      <li class="navigation__list-item">
-                        <a class="navigation__link" data-goto=".our-projects" href="#">Наши проекты<i class="arrow-down"></i></a>
+                        <a class="navigation__link" data-goto=".our-projects" href="#">Наши проекты<i class="navigation__arrow"></i></a>
                      </li>
                      <li class="navigation__list-item">
-                        <a class="navigation__link" data-goto=".services" href="#">Наши Услуги<i class="arrow-down"></i></a>
+                        <a class="navigation__link" data-goto=".services" href="#">Наши Услуги<i class="navigation__arrow"></i></a>
                      </li>
                      <li class="navigation__list-item">
-                        <a class="navigation__link" data-goto=".eye-tracking" href="#">Eye-tracking<i class="arrow-down"></i></a>
+                        <a class="navigation__link" data-goto=".eye-tracking" href="#">Eye-tracking<i class="navigation__arrow"></i></a>
                      </li>
                   </ul>
                </nav>
@@ -38,105 +38,124 @@
          </div>
       </header>
          <section class="main-screen">
-               <div class="section-row">
-                  <div class="section-column_left">
-                     <h2>Приведем клиентов в ваш бизнес</h2>
-                     <p class="descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения.</p>
-                     <div class="section-column__button buttons">Оставить заявку</div>
-                  </div>
-                  <div class="section-column_right">
-                     <img src="./img/picture_main_column_right_dark.png" alt="aghh... here must be a picture actually...">
+               <div class="main-screen__container">
+                  <div class="main-screen__row">
+                     <div class="main-screen__column-left">
+                        <div class="main-screen__content-container">
+                           <h1 class="main-screen__heading">SEO продвижение сайтов</h1>
+                           <p class="main-screen__description descriptions">После нашей SEO оптимизации Ваш сайт покажет максимальные результаты! Оставьте завяку для бесплатного аудита и мы с Вами свяжемся</p>
+                           <div class="main-screen__button buttons">Оставить заявку</div>
+                        </div>
+                     </div>
+                     <div class="main-screen__column-right">
+                        <div class="main-screen__content-container"><img src="./img/picture_main_column_right_dark.png" alt="main-screen picture"></div>
+                     </div>
                   </div>
                </div>
       </section>
       <section class="about">
-         <div class="section-column_left">
-            <img src="./img/pirture_about_column_left.png" alt="picture must be here">
-         </div>
-         <div class="section-column_right">
-            <h3>О нас</h3>
-            <img src="./img/picture_fox-digital.png" alt="picture_fox-digital">
-            <p class="about__description descriptions">Кстати, диаграммы связей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете. <br><br>Следует отметить, что начало повседневной работы по формированию позиции однозначно определяет каждого участника как способного принимать собственные решения касаемо экспериментов, поражающих по своей масштабности и грандиозности.</p>
+         <div class="about__container">
+            <div class="about__row">
+               <div class="about__column-left">
+                  <img src="./img/pirture_about_column_left.png" alt="picture must be here">
+               </div>
+               <div class="about__column-right">
+                  <h3>О нас</h3>
+                  <img src="./img/picture_fox-digital.png" alt="picture_fox-digital">
+                  <p class="about__description descriptions">Мы агентство результативного интернет-маркетинга и точно знаем, какие инструменты использовать, чтобы увеличить продажи и достигнуть цели.<br><br>За 13 лет мы реализовали 1500+ проектов, а 20 наших клиентов входят в TOP-100 Forbes Украина. Если результат для вас важен также как и для нас, тогда нам точно по пути!</p>
+               </div>
+            </div>
          </div>
       </section>
       <section class="achievements">
-         <div class="section-container">
-            <div class="section-row">
-               <div class="section-column_top">
-                  <div class="section-column__container">
-                     <div class="achievement-rectangles rectangle_small">
+         <div class="achievements__container">
+            <div class="achievements__row achievements__row--top">
+               <div class="achievements__column achievements__column--top">
+                  <div class="achievements__column_container">
+                     <div class="achievement-rectangles achievement-rectangles--small">
                         <span>>300</span>
                         <img src="./icons/icon-moon.png" alt="">
                      </div>
-                     <p class="descriptions">Проектов завершено</p>
-                     <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть</p>
+                     <p class="achievement-rectangles__descriptions descriptions">Проектов завершено</p>
+                     <p class="achievement-rectangles__sub-descriptions sub-descriptions">Каждый проект выполнен с невероятным вниманием к деталям и учетом всех пожеланий заказчика</p>
                   </div>
                </div>
-               <div class="section-column_top">
-                     <div class="section-column__container">
-                        <div class="achievement-rectangles rectangle_big">
-                           <span>2000</span>
+               <div class="achievements__column achievements__column--top">
+                     <div class="achievements__column_container">
+                        <div class="achievement-rectangles achievement-rectangles--big">
+                           <span>2138</span>
                            <img src="./icons/icon-moon.png" alt="">
                         </div>
-                        <p class="descriptions">Довольных клиентов</p>
-                        <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть</p>
+                        <p class="achievement-rectangles__descriptions descriptions">Довольных клиентов</p>
+                        <p class="achievement-rectangles__sub-descriptions sub-descriptions">Именно столько наших клиентов ощутили на себе результат качественной и профессиональной SEO-оптимизации от FOX-DIGITAL!</p>
                      </div>
                </div>
-               <div class="section-column_top">
-                  <div class="section-column__container">
-                     <div class="achievement-rectangles rectangle_small">
-                        <span>%100</span>
+               <div class="achievements__column achievements__column--top">
+                  <div class="achievements__column_container">
+                     <div class="achievement-rectangles achievement-rectangles--small">
+                        <span>95%</span>
                         <img src="./icons/icon-moon.png" alt="">
                      </div>
-                     <p class="descriptions">Довольных клиентов</p>
-                     <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть</p>
+                     <p class="achievement-rectangles__descriptions descriptions">Удовлетворенность результатом</p>
+                     <p class="achievement-rectangles__sub-descriptions sub-descriptions">На основе статистики google feedback. Мы гарантируем полный возврат средств если вам не понравится</p>
                   </div>
                </div>
             </div>
-            <div class="section-row">
-               <div class="section-column_bottom">
-                  <div class="section-column__container">
-                     <div class="achievement-rectangles rectangle_small">
-                        <span>%100</span>
+            <div class="achievements__row achievements__row--middle">
+               <div class="achievements__column_container">
+                  <div class="achievement-rectangles achievement-rectangles--big">
+                     <span>2138</span>
+                     <img src="./icons/icon-moon.png" alt="">
+                  </div>
+                  <p class="achievement-rectangles__descriptions descriptions">Довольных клиентов</p>
+                  <p class="achievement-rectangles__sub-descriptions sub-descriptions">Именно столько наших клиентов ощутили на себе результат качественной и профессиональной SEO-оптимизации от FOX-DIGITAL!</p>
+               </div>
+            </div>
+            <div class="achievements__row achievements__row--bottom">
+               <div class="achievements__column achievements__column--bottom">
+                  <div class="achievements__column_container">
+                     <div class="achievement-rectangles achievement-rectangles--small">
+                        <span>÷10</span>
                         <img src="./icons/icon-moon.png" alt="">
                      </div>
-                     <p class="descriptions">Довольных клиентов</p>
-                     <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть</p>
+                     <p class="achievement-rectangles__descriptions descriptions">Стоимость конверсии</p>
+                     <p class="achievement-rectangles__sub-descriptions sub-descriptions">Уменьшение стоимости клика более чем в 10 раз!</p>
                   </div>
                </div>
-               <div class="section-column_bottom">
-                  <div class="section-column__container">
-                     <div class="achievement-rectangles rectangle_small">
-                        <span>%100</span>
+               <div class="achievements__column achievements__column--bottom">
+                  <div class="achievements__column_container">
+                     <div class="achievement-rectangles achievement-rectangles--small">
+                        <span>187%</span>
                         <img src="./icons/icon-moon.png" alt="">
                      </div>
-                     <p class="descriptions">Довольных клиентов</p>
-                     <p class="sub-descriptions">А также сделанные на базе интернет-аналитики выводы формируют глобальную экономическую сеть</p>
+                     <p class="achievement-rectangles__descriptions descriptions">Средний прирост трафика</p>
+                     <p class="achievement-rectangles__sub-descriptions sub-descriptions">И это только средний показатель! В некоторых проектах нам удавалось достигать прироста трафика в десятки раз!</p>
                   </div>
                </div>
             </div>
          </div>
       </section>
       <section class="our-projects">
-            <div class="section-row">
-               <div class="section-column_left">
+            <div class="our-projects__container">
+               <div class="our-projects__column our-projects__column--left">
                   <h3>Наши проекты</h3>
-                  <h2>Приведем клиентов в ваш бизнес</h2>
-                  <p class="descriptions">Оставьте заявку на бесплатный аудит прямо сейчас и мы подберем для вас оптимальный пакет продвижения</p>
+                  <h2>FOX DIGITAL – выбор лидеров!</h2>
+                  <p class="our-projects__description descriptions">Наш логотип – ассоциируется с
+                     поиском информации в интернете.<br><br>Хотите работать с нами и получать максимум от интернет-рекламы и продвижения?</p>
                   <form class="audit-form" action="/forms/client_form_info.xml" method="post">
                            <input type="text" id="name" name="user_name" placeholder="Ваше имя">
-                           <input type="tel" id="name" name="user_name" placeholder="Телефон">
-                           <div class="audit-button buttons"><span>Заказать аудит</span></div>
+                           <input type="tel" id="name" name="user_cell" placeholder="Телефон">
                   </form>
+                  <div class="our-projects__audit-button audit-button buttons">Заказать аудит</div>
                </div>
-               <div class="section-column_middle">
-                     <input type="radio" name="picture_selection" value="first_picture">
-                     <input type="radio" name="picture_selection" value="second_picture">
-                     <input type="radio" name="picture_selection" value="third_picture" checked>
-                     <input type="radio" name="picture_selection" value="fourth_picture">
-                     <input type="radio" name="picture_selection" value="fifth_picture">
-               </div>
-               <div class="section-column_right">
+               <div class="our-projects__column our-projects__column--right">
+                  <div class="slider__radio-buttons-block">
+                     <input class="slider__radio-button" type="radio" name="picture_selection" value="first_picture">
+                     <input class="slider__radio-button" type="radio" name="picture_selection" value="second_picture">
+                     <input class="slider__radio-button" type="radio" name="picture_selection" value="third_picture" checked>
+                     <input class="slider__radio-button" type="radio" name="picture_selection" value="fourth_picture">
+                     <input class="slider__radio-button" type="radio" name="picture_selection" value="fifth_picture">
+                  </div>
                   <div class="slider-block">
                      <div class="slider-block__item"><img src="./img/picture_our_projects_1.png" alt="picture didn't load"></div>
                      <div class="slider-block__item"><img src="./img/picture_our_projects_2.png" alt="picture didn't load"></div>
@@ -326,26 +345,26 @@
          </div>
       </div>
       </section>
-      <section class="footer-section">
-      <div class="section-container">
-         <div class="section-row-audit-form" style="display: none;">
-            <h2>Оставьте заявку</h2>
-            <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
-            <form class="audit-form" action="/forms/client_form_info.xml" method="post">
-                     <input type="text" id="name" name="user_name" placeholder="Ваше имя">
-                     <input type="tel" id="name" name="user_name" placeholder="Телефон">
-                     <div class="audit-button buttons"><span>Заказать аудит</span></div>
-            </form>
-         </div>
-            <footer>
-               <img src="./img/picture_logo_footer.png" alt="">
-               <div class="creator-info">
-                  <p class="sub-descriptions">Created by: Oleksandr Tomashevskyi</p>
-                  <p class="sub-descriptions">oleksandr.o.tomashevskyi@gmail.com</p>
-               </div>
-            </footer>
+<section class="footer-section">
+   <div class="section-container">
+      <div class="section-row-audit-form" style="display: none;">
+         <h2>Оставьте заявку</h2>
+         <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
+         <form class="audit-form" action="/forms/client_form_info.xml" method="post">
+                  <input type="text" id="name" name="user_name" placeholder="Ваше имя">
+                  <input type="tel" id="name" name="user_name" placeholder="Телефон">
+                  <div class="audit-button buttons"><span>Заказать аудит</span></div>
+         </form>
       </div>
-   </section>
+         <footer>
+            <img src="./img/picture_logo_footer.png" alt="">
+            <div class="creator-info">
+               <p class="sub-descriptions">Created by: Oleksandr Tomashevskyi</p>
+               <p class="sub-descriptions">oleksandr.o.tomashevskyi@gmail.com</p>
+            </div>
+         </footer>
+   </div>
+</section>
 </div>
 <script src="./js/script.js"></script>
 </body>

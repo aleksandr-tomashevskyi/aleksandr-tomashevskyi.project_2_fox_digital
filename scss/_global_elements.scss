@@ -1,0 +1,97 @@
+h1{
+   font-family: 'Poppins', 'Raleway', sans-serif;
+   font-size: $seventyFiveToThirtyPx; //original size 75px
+   font-weight: 700;
+   line-height: 1em;
+}
+h2{
+   font-family: 'Poppins', 'Raleway', sans-serif;
+   font-size: $seventyFiveToThirtyPx; //original size 75px
+   font-weight: 700;
+   line-height: 1em;
+}
+h3{
+   font-size: $twentySixToEighteenPx; //original size 26px
+   font-family: 'Montserrat', 'sans-serif';
+   font-weight: 400;
+   color: #060606;
+   opacity: 80%;
+}
+.descriptions{
+   font-family: 'Montserrat', sans-serif;
+   font-size: $twentySixToEighteenPx; //original size 26px
+   font-weight: 400;
+   line-height: 1.23em;
+}
+.sub-descriptions{
+   font-family: 'Montserrat', sans-serif;
+   font-size: $eighteenToTwelvePx; //original size 18px
+   font-weight: 400;
+   opacity: 70%;
+   line-height: 1.22em;
+}
+.buttons{
+   font-family: 'Montserrat', sans-serif;
+   font-size: $twentySixToEighteenPx; //original size 26px
+   cursor: pointer;
+}
+.audit-button{
+   position: relative;
+   width: 14.58em;
+   padding: 2em 0;
+   line-height: 1em;
+   border-radius: 0.625em;
+   background: linear-gradient(to right, $accent, #0085FF);
+   color: #ffff;
+   text-align: center;
+   font-weight: 500;
+   letter-spacing: 0.05em;
+   &::after{
+      content: url(../icons/icon_telegram.png);
+      margin-left: 1.25em;
+      position: relative;
+      top: 0.2em;
+   }
+   @media(max-width: 767px){
+      margin: 0 auto 50px;
+      width: 13em;
+      padding: 1.3em 0;
+      // display: none;
+   }
+}
+.achievement-rectangles{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: $accent;
+   border-radius: 5px;
+   font-family: 'Montserrat', sans-serif;
+   color: #FCFCFC;
+   font-size: $fourtySixToTventyEightPx; //calculated from parent normal font size 46px
+   font-weight: 700;
+   box-shadow: 5px 7px 5px #7c7c7c;
+   img{
+      margin-top: 0.086956522em; //calculated from parent normal font size 46px
+      width: 0.565217391em;
+   }
+   span{
+      font-family: inherit;
+   }
+}
+.service-rectangles{
+   font-size: $fourtySixToTventyEightPx; //needed for adaptivity, 46 to 28
+   position: relative;
+   width: 4em;
+   height: 2.2em;
+   background-color: $accent;
+   border-radius: 5px;
+   margin: 0 auto;
+   img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+}

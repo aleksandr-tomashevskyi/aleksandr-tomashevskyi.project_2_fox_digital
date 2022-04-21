@@ -1,0 +1,10 @@
+//Calculation of used font sizes for adaptive design
+$seventyFiveToThirtyPx: calc(30px + (75 - 30)*((100vw - 320px) / (1920 - 320))); //75px to 30px
+$fourtySixToTventyEightPx: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320))); //75px to 30px
+$twentySixToEighteenPx: calc(18px + (26 - 18)*((100vw - 320px) / (1920 - 320))); //26px to 18px
+$twentySixToTwelvePx: calc(12px + (26 - 12)*((100vw - 320px) / (1920 - 320))); //26px to 18px
+$twentyToFefteenPx: calc(15px + (22 - 15)*((100vw - 320px) / (1920 - 320))); //20px to 15px
+$eighteenToTwelvePx: calc(12px + (18 - 12)*((100vw - 320px) / (1920 - 320))); //18px to 12px
+
+// colors
+$accent: #1F7CE3;

@@ -6,14 +6,14 @@ console.log('hello world!');
 //       Slider code start
 
 // getting block with radio buttons
-const radioSwitcherBlock = document.querySelector(".section-column_middle");
+const radioSwitcherBlock = document.querySelector(".slider__radio-buttons-block");
 // getting collection of objects of radio buttons
 const radioSwitcherCollection = radioSwitcherBlock.children;
 console.log(radioSwitcherCollection, typeof(radioSwitcherCollection));
 // getting values of each radio button (accessing)
 const radioKeys = Object.values(radioSwitcherCollection);
 // getting colection of objects of images stored in right block
-const imagesCollectionBlock = document.querySelector(".our-projects .section-column_right .slider-block");
+const imagesCollectionBlock = document.querySelector(".slider-block");
 console.log("This is the imagesCollectionBlock: ", imagesCollectionBlock);
 const imagesCollection = imagesCollectionBlock.children;
 console.log('getting imagesCollection - succesfull');
@@ -251,6 +251,7 @@ function ancorScrollFunc(navItemClickedVar, event){
    console.log('Here is the ancor element: ', ancorElement);
    window.scrollTo({top: (`${ancorElement.offsetTop}` - 80), behavior: 'smooth'});
    document.querySelector(".navigation__body").classList.remove("navigation__body_active");
+   console.log("ScrollFunctionCheck - successfull");
 };
 
 document.querySelector(".navigation__list-block").addEventListener('click', (event) => {
@@ -263,11 +264,6 @@ document.querySelector(".navigation__list-block").addEventListener('click', (eve
       }
    }
 })
-// document.querySelector(".nav-list").addEventListener('click', ancorScrollFunc);
-// function ancorScrollFunc(e){
-//    console.log(e.target);
-//    e.preventDefault();
-// }
 
 // showing an arrow on links when mouse is over
 document.querySelector(".navigation__list-block").addEventListener('mouseover', showArrow);
