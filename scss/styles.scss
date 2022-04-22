@@ -618,45 +618,64 @@ body{
 .audit-form{
    display: flex;
    flex-direction: column;
+   margin-bottom: 30px;
    @media(max-width: 767px){
       flex-direction: row;
-      margin-bottom: 40px;
+      justify-content: space-evenly;
+      // margin-bottom: 20px;
+   }
+   @media(max-width: 480px){
+      flex-direction: column;
+      // margin-bottom: 30px;
    }
       input{
-         width: 100%;
+         width: 60%;
+         min-width: 335px;
          height: 4.4em;
          padding: 0 0 0 1.6em;
          line-height: 1em;
          border-radius: 0.83em;
          font-size: $eighteenToTwelvePx;
          font-family: inherit;
-         @media(max-width: 1024px){
-            padding: 27px 0 27px 2em;
-         }
+         // @media(max-width: 1024px){
+
+         // }
          @media(max-width: 767px){
-            width: 50%;
-            padding: 25px 0 25px 0.5em;
+            width: 45%;
+            min-width: 150px;
+         }
+         @media(max-width: 480px){
+            width: 80%;
+            min-width: 150px;
          }
       }
       input:first-of-type{
          margin-bottom: 1.33em;
-         @media(max-width: 767px){
-            margin: 0 auto;
-            border-radius: 0.83em 0 0 0.83em;
-            border-right: rgba(167, 167, 167, 0.3) solid 1px;
-         }
+         // @media(max-width: 767px){
+         //    // margin: 0 auto;
+         //    // border-radius: 0.83em 0 0 0.83em;
+         //    // border-right: rgba(167, 167, 167, 0.3) solid 1px;
+         // }
       }
-      input:last-of-type{
-         margin-bottom: 2em;
-         @media(max-width: 767px){
-            margin: 0 auto;
-            border-radius: 0 0.83em 0.83em 0;
-         }
-      }
+         // input:last-of-type{
+         //    margin-bottom: 2em;
+         //    @media(max-width: 767px){
+         //       margin-bottom: 10px;
+         //       // border-radius: 0 0.83em 0.83em 0;
+         //    }
+         //    @media(max-width: 480px){
+         //       margin-bottom: 10px;
+         //       // border-radius: 0 0.83em 0.83em 0;
+         //    }
+         // }
 }
 .our-projects__audit-button{
    @media(max-width: 767px){
-      margin: 0 auto 40px;
+      margin: 20px auto 50px;
+      // display: none;
+   }
+   @media(max-width: 480px){
+      margin: 20px 0 50px;
       // display: none;
    }
 }
