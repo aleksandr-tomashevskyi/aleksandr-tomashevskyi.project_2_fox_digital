@@ -270,7 +270,6 @@ document.querySelector(".navigation__list-block").addEventListener('mouseover', 
 function showArrow(event){
    if(event.target.closest('.navigation__list-item')){
       event.target.firstElementChild.classList.toggle("_active");
-      console.log('showArrow');
    }
 }
 // showing an arrow on links when mouse is out

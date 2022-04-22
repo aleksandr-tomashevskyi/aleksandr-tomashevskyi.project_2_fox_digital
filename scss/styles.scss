@@ -94,13 +94,12 @@ body{
       position: relative;
       top: 10px;
    }
-         @media (max-height: 481px){
-         font-size: 20px;
-         line-height: 20px;
-         position: relative;
-         top: 20px;
-      }
-
+   @media (max-height: 481px){
+   font-size: 20px;
+   line-height: 20px;
+   position: relative;
+   top: 20px;
+   }
 }
 .navigation__link{
    color: #fff;
@@ -125,8 +124,11 @@ body{
       border-width: 0 5px 5px 0;
       padding: 5px;
       top: 0%;
-      left: -30px;
    }
+   @media (max-height: 481px){
+      border-width: 0 3px 3px 0;
+      padding: 3px;
+      }
  }
  .navigation__arrow._active{
    top: 120%;
@@ -136,6 +138,9 @@ body{
       top: 30%;
       left: -30px;
    }
+   @media (max-height: 481px){
+      left: -20px;
+      }
  }
 .navigation__icon{
    display: none;

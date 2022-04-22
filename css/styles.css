@@ -378,7 +378,13 @@ body {
     border-width: 0 5px 5px 0;
     padding: 5px;
     top: 0%;
-    left: -30px;
+  }
+}
+
+@media (max-height: 481px) {
+  .navigation__arrow {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
   }
 }
 
@@ -392,6 +398,12 @@ body {
   .navigation__arrow._active {
     top: 30%;
     left: -30px;
+  }
+}
+
+@media (max-height: 481px) {
+  .navigation__arrow._active {
+    left: -20px;
   }
 }
 
