@@ -319,12 +319,13 @@ body {
   display: inline;
   margin: 0 0.5vw 0 0.5vw;
   text-align: center;
+  z-index: 20;
 }
 
 @media (max-width: 1024px) {
   .navigation__list-item {
     display: list-item;
-    margin: 50px 0;
+    margin: 8vh 0;
     text-align: left;
     font-size: 50px;
     line-height: 50px;
@@ -335,6 +336,17 @@ body {
   .navigation__list-item {
     font-size: 30px;
     line-height: 30px;
+    position: relative;
+    top: 10px;
+  }
+}
+
+@media (max-height: 481px) {
+  .navigation__list-item {
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    top: 20px;
   }
 }
 
