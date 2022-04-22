@@ -43,31 +43,47 @@ h3 {
 }
 
 .audit-button {
+  font-size: calc(12px + (18 - 12)*((100vw - 320px) / (1920 - 320)));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  width: 14.58em;
-  padding: 2em 0;
+  width: 16.6em;
+  height: 5em;
   line-height: 1em;
-  border-radius: 0.625em;
+  border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#1F7CE3), to(#0085FF));
   background: linear-gradient(to right, #1F7CE3, #0085FF);
-  color: #ffff;
-  text-align: center;
-  font-weight: 500;
   letter-spacing: 0.05em;
 }
 
 .audit-button::after {
-  content: url(../icons/icon_telegram.png);
-  margin-left: 1.25em;
-  position: relative;
-  top: 0.2em;
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  content: '';
+  background-image: url(../icons/icon_telegram.svg);
+  margin-left: 20px;
+  background-position: initial;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.audit-button span {
+  font-family: inherit;
+  font-weight: 600;
+  color: #ffff;
 }
 
 @media (max-width: 767px) {
   .audit-button {
     margin: 0 auto 50px;
-    width: 13em;
-    padding: 1.3em 0;
   }
 }
 
@@ -723,6 +739,17 @@ body {
 }
 
 @media (max-width: 480px) {
+  .achievements__row--bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
   .achievements__column {
     margin: 40px 0;
   }
@@ -904,7 +931,7 @@ body {
   margin-left: 10vw;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .our-projects__column--left {
     width: 80%;
     margin: 0 auto;
@@ -1138,7 +1165,8 @@ body {
 
 .audit-form input {
   width: 100%;
-  padding: 2.2em 0 2.2em 1.6em;
+  height: 4.4em;
+  padding: 0 0 0 1.6em;
   line-height: 1em;
   border-radius: 0.83em;
   font-size: calc(12px + (18 - 12)*((100vw - 320px) / (1920 - 320)));

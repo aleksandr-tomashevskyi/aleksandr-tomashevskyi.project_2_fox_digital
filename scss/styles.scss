@@ -344,6 +344,10 @@ body{
 .achievements__row--bottom{
    justify-content: space-around;
    align-items: flex-start;
+   @media(max-width: 480px){
+      justify-content: center;
+      align-items: center;
+  }
 }
 .achievements__column{
    @media(max-width: 480px){
@@ -457,7 +461,7 @@ body{
 .our-projects__column--left{
    flex: 0 1 40.5%;
    margin-left: 10vw;
-   @media(max-width: 1024px){
+   @media(max-width: 767px){
       width: 80%;
       margin: 0 auto;
    }
@@ -605,7 +609,8 @@ body{
    }
       input{
          width: 100%;
-         padding: 2.2em 0 2.2em 1.6em;
+         height: 4.4em;
+         padding: 0 0 0 1.6em;
          line-height: 1em;
          border-radius: 0.83em;
          font-size: $eighteenToTwelvePx;
