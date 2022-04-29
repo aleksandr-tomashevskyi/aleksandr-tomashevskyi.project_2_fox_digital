@@ -87,19 +87,3 @@ h3{
       font-family: inherit;
    }
 }
-.service-rectangles{
-   font-size: $fourtySixToTventyEightPx; //needed for adaptivity, 46 to 28
-   position: relative;
-   width: 4em;
-   height: 2.2em;
-   background-color: $accent;
-   border-radius: 5px;
-   margin: 0 auto;
-   img{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-   }
-}
