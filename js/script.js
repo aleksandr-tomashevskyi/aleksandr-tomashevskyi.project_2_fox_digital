@@ -203,46 +203,14 @@ setInterval(autoSlideChange, 8000);
 //Automatic slide change code block end
 //          Slider code end
 
-//       Audit popup form code start
-
-const footerAuditForm = document.querySelector(".section-row-audit-form");
-const footerSection = document.querySelector(".footer-section");
-
-function showForm(){
-   footerAuditForm.style.display = "block";
-   footerSection.scrollIntoView({block: 'start', behavior: 'smooth'});
-   console.log('it works!');
-}
-function hideForm(){
-   footerAuditForm.style.display = "none";
-   footerSection.scrollIntoView({block: 'end', behavior: 'smooth'});
-   console.log('it works again!');
-}
-footerSection.addEventListener('mouseenter', () => {
-   showForm();
-});
-footerSection.addEventListener('mouseleave', () => {
-   hideForm();
-});
-
-//      Audit popup form code end
-
 //      Header links decoration code start
 const menuItemCollection = document.querySelectorAll(".navigation__link[data-goto]");
 const sectionItemCollection = document.querySelectorAll("section");
+
+
+
+//       Scroll to ancor function
 let navItemClickedVar;
-// function getNavItemClicked(){
-   
-// }
-// sectionItemCollection.forEach(function(item, i){
-//    if(item.matches(`[class=${varAchievement}]`)){
-//       console.log('match-found! It is: ', item, "with number:", i);
-//    }
-// });
-// console.log(sectionItemCollection);
-
-//Scroll to ancor function
-
 function ancorScrollFunc(navItemClickedVar, event){
    console.log("here is the event: ", event)
    event.preventDefault();

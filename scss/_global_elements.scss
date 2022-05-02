@@ -87,3 +87,35 @@ h3{
       font-family: inherit;
    }
 }
+
+
+.audit-form{
+   display: flex;
+}
+.audit-form__input{
+   width: 60%;
+   height: 4.4em;
+   padding: 0 0 0 1.6em;
+   line-height: 1em;
+   border-radius: 0.83em;
+   font-size: $eighteenToTwelvePx;
+   font-family: inherit;
+   // @media(max-width: 1024px){
+
+   // }
+   @media(max-width: 767px){
+      width: 45%;
+   }
+   @media(max-width: 480px){
+      width: 80%;
+   }
+}
+.logo{ 
+   flex: 1 1 10%;
+   height: 2.5em;
+   z-index: 12;
+}
+.logo__image{
+   height: 100%;
+   object-fit: contain;
+}

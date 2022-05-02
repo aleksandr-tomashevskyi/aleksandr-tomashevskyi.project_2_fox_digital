@@ -142,9 +142,9 @@
                   <h2>FOX DIGITAL – выбор лидеров!</h2>
                   <p class="our-projects__description descriptions">Наш логотип – ассоциируется с
                      поиском информации в интернете.<br><br>Хотите работать с нами и получать максимум от интернет-рекламы и продвижения?</p>
-                  <form class="audit-form" action="/forms/client_form_info.xml" method="post">
-                           <input type="text" id="name" name="user_name" placeholder="Ваше имя">
-                           <input type="tel" id="name" name="user_cell" placeholder="Телефон">
+                  <form class="our-projects__audit-form audit-form" action="/forms/client_form_info.xml" method="post">
+                           <input class="our-projects__audit-form-input audit-form__input" type="text" id="name" name="user_name" placeholder="Ваше имя">
+                           <input class="our-projects__audit-form-input audit-form__input" type="tel" id="name" name="user_cell" placeholder="Телефон">
                   </form>
                   <div class="our-projects__audit-button audit-button buttons"><span>Заказать аудит</span></div>
                </div>
@@ -300,42 +300,42 @@
       </div>
    </section>
    <section class="our-clients">
-      <div class="section-row-headings">
+      <div class="our-clients__headings">
          <h3>Наши клиенты</h3>
          <h2>Нам доверяют</h2>
       </div>
-      <div class="section-row-clients-cards">
-         <div class="client-cards-container">
-            <div class="cards__row">
-                  <div class="client-card">
+      <div class="our-clients-cards-block">
+         <div class="our-clients-cards-block__container">
+            <div class="our-clients-cards-block__row">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-hundai.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img class="tatneft" src="./icons/icon-tatneft.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-harrat.png" alt="">
                   </div>
             </div>
-            <div class="cards__row">
-                  <div class="client-card">
+            <div class="our-clients-cards-block__row">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-pic.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-sun-development.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-agency.png" alt="">
                   </div>
             </div>
-            <div class="cards__row">
-                  <div class="client-card">
+            <div class="our-clients-cards-block__row">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-top-dog.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-marais.png" alt="">
                   </div>
-                  <div class="client-card">
+                  <div class="our-clients-cards-block__card-element">
                      <img src="./icons/icon-alreze.png" alt="">
                   </div>
             </div>
@@ -343,25 +343,27 @@
       </div>
       </section>
 <section class="footer-section">
-   <div class="section-container">
-      <div class="section-row-audit-form" style="display: none;">
+   <div class="footer-section__container">
          <h2>Оставьте заявку</h2>
          <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
-         <form class="audit-form" action="/forms/client_form_info.xml" method="post">
-                  <input type="text" id="name" name="user_name" placeholder="Ваше имя">
-                  <input type="tel" id="name" name="user_name" placeholder="Телефон">
-                  <div class="audit-button buttons"><span>Заказать аудит</span></div>
+         <form class="audit-form footer-section__audit-form" action="/forms/client_form_info.xml" method="post">
+                  <div class="footer-section__input-container"><input class="footer-section__audit-form-input audit-form__input" type="text" id="name" name="user_name" placeholder="Ваше имя"></div>
+                  <div class="footer-section__input-container"><input class="footer-section__audit-form-input audit-form__input" type="tel" id="name" name="user_name" placeholder="Телефон"></div>
+                  <div class="footer-section__input-container">
+                     <div class="footer-section__audit-form-button audit-button buttons"><span>Заказать аудит</span></div>
+                  </div>
          </form>
-      </div>
-         <footer>
-            <img src="./img/picture_logo_footer.svg" alt="">
-            <div class="creator-info">
-               <p class="sub-descriptions">Created by: Oleksandr Tomashevskyi</p>
-               <p class="sub-descriptions">oleksandr.o.tomashevskyi@gmail.com</p>
-            </div>
-         </footer>
    </div>
 </section>
+<footer class="footer">
+   <div class="logo">
+      <img class="logo__image" src="./img/picture_logo_footer.svg" alt="">
+   </div>
+   <div class="creator-info">
+      <p class="sub-descriptions">Created by: Oleksandr Tomashevskyi</p>
+      <p class="sub-descriptions">oleksandr.o.tomashevskyi@gmail.com</p>
+   </div>
+</footer>
 </div>
 <script src="./js/script.js"></script>
 </body>
