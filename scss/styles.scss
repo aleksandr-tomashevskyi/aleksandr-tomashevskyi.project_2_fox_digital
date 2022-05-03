@@ -27,7 +27,7 @@ body{
 .header__container{
    display: flex;
    width: 80%;
-   font-size: 18px; //original font-size 20px
+   font-size: 18px;
    padding: 10px 0;
 }
 .navigation{
@@ -1022,7 +1022,7 @@ body{
    justify-content: center;
    align-items: center;
    position: relative;
-   margin: 0 auto;
+   // margin: 0 auto;
    width: 23vw;
    height: 18vw;
    border-radius: 0.78vw;
@@ -1031,7 +1031,7 @@ body{
    img{
       width: 80%;
       height: 80%;
-      margin: 0 5%;
+      // margin: 0 5%;
       object-fit: scale-down;
    }
    .tatneft{
@@ -1049,6 +1049,12 @@ body{
    h2{
       text-align: center;
       margin-bottom: 2vw;
+      @media(max-width: 767px){
+         margin: 5vw 0;
+      }
+      @media(max-width: 480px){
+         margin: 8vw 0;
+      }
    }
    .descriptions{
       text-align: center;
@@ -1079,10 +1085,11 @@ body{
    &:last-child{
       @media(max-width: 1024px){
          grid-column-start: span 2;
-         margin-top: 2vw;
+         margin-top: 5vw;
       }
       @media(max-width: 480px){
          grid-column-start: 1;
+         margin: 5vw 0;
    }
    }
 }
@@ -1102,22 +1109,40 @@ body{
 
 
 .footer{
+   font-size: 18px;
    width: 80%;
-   font-size: inherit;
    margin: 0 auto;
-   margin-bottom: 1vh;
+   padding: 10px 0;
    display: flex;
    justify-content: space-between;
-   .creator-info{
-      flex: 1;
-      display: flex;
+   @media(max-width: 480px){
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      p:last-of-type{
-         color: black;
-         font-weight: 600;
-         opacity: none;
-      }
    }
+}
+.footer__logo{
+   max-height: 2em;
+   @media(max-width: 480px){
+      display: none;
+   }
+}
+.footer__creator-info{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   @media(max-width: 767px){
+      font-size: 10px;
+}
+   p:last-of-type{
+      color: black;
+      font-weight: 600;
+      opacity: none;
+   }
+}
+.footer__sub-descriptions{
+   @media(max-width: 480px){
+      font-size: 8px;
+}
 }

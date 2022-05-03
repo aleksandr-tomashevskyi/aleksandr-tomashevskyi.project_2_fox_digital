@@ -1770,7 +1770,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin: 0 auto;
   width: 23vw;
   height: 18vw;
   border-radius: 0.78vw;
@@ -1782,7 +1781,6 @@ body {
 .our-clients-cards-block__card-element img {
   width: 80%;
   height: 80%;
-  margin: 0 5%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
@@ -1804,6 +1802,18 @@ body {
 .footer-section .footer-section__container h2 {
   text-align: center;
   margin-bottom: 2vw;
+}
+
+@media (max-width: 767px) {
+  .footer-section .footer-section__container h2 {
+    margin: 5vw 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section .footer-section__container h2 {
+    margin: 8vw 0;
+  }
 }
 
 .footer-section .footer-section__container .descriptions {
@@ -1853,7 +1863,7 @@ body {
   .footer-section__input-container:last-child {
     -ms-grid-column: span 2;
         grid-column-start: span 2;
-    margin-top: 2vw;
+    margin-top: 5vw;
   }
 }
 
@@ -1861,6 +1871,7 @@ body {
   .footer-section__input-container:last-child {
     -ms-grid-column: 1;
         grid-column-start: 1;
+    margin: 5vw 0;
   }
 }
 
@@ -1887,10 +1898,10 @@ body {
 }
 
 .footer {
+  font-size: 18px;
   width: 80%;
-  font-size: inherit;
   margin: 0 auto;
-  margin-bottom: 1vh;
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1899,7 +1910,29 @@ body {
           justify-content: space-between;
 }
 
-.footer .creator-info {
+@media (max-width: 480px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer__logo {
+  max-height: 2em;
+}
+
+@media (max-width: 480px) {
+  .footer__logo {
+    display: none;
+  }
+}
+
+.footer__creator-info {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1918,8 +1951,20 @@ body {
           align-items: center;
 }
 
-.footer .creator-info p:last-of-type {
+@media (max-width: 767px) {
+  .footer__creator-info {
+    font-size: 10px;
+  }
+}
+
+.footer__creator-info p:last-of-type {
   color: black;
   font-weight: 600;
   opacity: none;
+}
+
+@media (max-width: 480px) {
+  .footer__sub-descriptions {
+    font-size: 8px;
+  }
 }
