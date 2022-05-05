@@ -22,7 +22,9 @@ html, body{
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
-input, button, area{font-family: inherit;}
+input, button, area{
+   font-family: inherit;
+   -webkit-appearance: none;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
 a, a:visited{text-decoration: none; color: inherit; font-family: inherit;}
