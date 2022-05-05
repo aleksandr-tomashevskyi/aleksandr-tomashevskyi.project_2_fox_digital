@@ -211,6 +211,7 @@ const sectionItemCollection = document.querySelectorAll("section");
 
 //       Scroll to ancor function
 let navItemClickedVar;
+let bodyScrollDisableFlag = false;
 function ancorScrollFunc(navItemClickedVar, event){
    console.log("here is the event: ", event)
    event.preventDefault();
@@ -219,6 +220,10 @@ function ancorScrollFunc(navItemClickedVar, event){
    console.log('Here is the ancor element: ', ancorElement);
    window.scrollTo({top: (`${ancorElement.offsetTop}` - 80), behavior: 'smooth'});
    document.querySelector(".navigation__body").classList.remove("navigation__body_active");
+   if(bodyScrollDisableFlag){
+      document.body.style.overflow = 'auto';
+      bodyScrollDisableFlag = false;
+      }
    console.log("ScrollFunctionCheck - successfull");
 };
 
@@ -275,6 +280,13 @@ window.addEventListener("scroll", function(event){
 const menuIconBlock = document.querySelector(".navigation__icon");
 menuIconBlock.addEventListener("click", function(event){
    document.querySelector(".navigation__body").classList.toggle("navigation__body_active");
+   if(!bodyScrollDisableFlag){ //checking if scroll was already disabled
+   document.body.style.overflow = 'hidden'; //scroll disable
+   bodyScrollDisableFlag = true; //setting memory flag for returning scroll back in the future
+   } else {
+      document.body.style.overflow = 'auto';
+      bodyScrollDisableFlag = false;
+   }
 })
 
 
