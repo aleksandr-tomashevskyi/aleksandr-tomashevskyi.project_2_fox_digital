@@ -219,7 +219,6 @@ body{
          margin: 0;
       }
    }
-
 }
 .main-screen__column-right{
    flex: 0 1 50%;
@@ -262,6 +261,8 @@ body{
       width: 100%;
    }
 }
+
+
 
 
 .about{
@@ -611,7 +612,6 @@ body{
    cursor: pointer;
 }
 .our-projects__audit-form{
-   display: grid;
    grid-template-columns: 1fr;
    @media(max-width: 767px){
       grid-template-columns: 1fr 1fr;
@@ -1071,9 +1071,9 @@ body{
 }
 
 
-.footer-section{
+.footer-form{
    padding-bottom: 8vw;
-.footer-section__container{
+.footer-form__container{
    width: 80%;
    margin: 0 auto;
    h2{
@@ -1092,13 +1092,13 @@ body{
    }
 }
 }
-.footer-section__audit-form-button{
+.footer-form__audit-form-button{
    height: 4.4em;
    @media(max-width: 1024px){
          margin: 0 auto;
    }
 }
-.footer-section__audit-form{
+.footer-form__audit-form{
    display: grid;
    grid-template-columns: 1fr 1fr max-content;
       @media(max-width: 1024px){
@@ -1108,7 +1108,7 @@ body{
       grid-template-columns: 1fr;
 }
 }
-.footer-section__input-container{
+.footer-form__input-container{
    @media(max-width: 480px){
       margin: 1.5vw;
 }
@@ -1123,9 +1123,9 @@ body{
    }
    }
 }
-.footer-section__audit-form-input{
+.footer-form__audit-form-input{
    width: 90%;
-   box-shadow: 3px 0 15px 0 rgba(0, 0, 0, 0.3), -3px 0 15px 0 rgba(0, 0, 0, 0.3);
+   box-shadow: $inputFormShadows;
    &:nth-child(2){
       margin: 0 3vw 0 1.5vw;
       @media(max-width: 480px){

@@ -45,6 +45,26 @@
                            <h1 class="main-screen__heading">SEO продвижение сайтов</h1>
                            <p class="main-screen__description descriptions">После нашей SEO оптимизации Ваш сайт покажет максимальные результаты! Оставьте завяку для бесплатного аудита и мы с Вами свяжемся</p>
                            <div class="main-screen__button buttons">Оставить заявку</div>
+                           <div class="popup-window-audit-form popup-window">
+                              <div class="popup-window__body">
+                                 <div class="popup-window_content-container">
+                                    <h2>Оставьте заявку</h2>
+                                    <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
+                                    <form class="popup-audit-form audit-form" action="/forms/client_form_info.xml" method="post">
+                                       <div class="popup-audit-form__input-wrapper">
+                                          <input class="popup-audit-form__input audit-form__input" type="text" id="name" name="user_name" placeholder="Ваше имя">
+                                       </div>
+                                       <div class="popup-audit-form__input-wrapper">
+                                          <input class="popup-audit-form__input audit-form__input" type="tel" id="name" name="user_cell" placeholder="Телефон">
+                                       </div>
+                                       <div class="popup-audit-form__input-wrapper">
+                                          <button type="submit" class="popup-audit-form__button audit-button buttons"><span>Заказать аудит</span>
+                                          </div>
+                                       </form>
+                                 </div>
+                                 <span class="popup-audit-form__cross-sign cross-sign">X</span>
+                              </div>
+                           </div>
                         </div>
                      </div>
                      <div class="main-screen__column-right">
@@ -342,15 +362,15 @@
          </div>
       </div>
       </section>
-<section class="footer-section">
-   <div class="footer-section__container">
+<section class="footer-form">
+   <div class="footer-form__container">
          <h2>Оставьте заявку</h2>
          <p class="descriptions">Получите бесплатный аудит вашего проекта</p>
-         <form class="audit-form footer-section__audit-form" action="/forms/client_form_info.xml" method="post">
-                  <div class="footer-section__input-container"><input class="footer-section__audit-form-input audit-form__input" type="text" id="name" name="user_name" placeholder="Ваше имя"></div>
-                  <div class="footer-section__input-container"><input class="footer-section__audit-form-input audit-form__input" type="tel" id="name" name="user_name" placeholder="Телефон"></div>
-                  <div class="footer-section__input-container">
-                     <button type="submit" class="footer-section__audit-form-button audit-button buttons"><span>Заказать аудит</span>
+         <form class="audit-form footer-form__audit-form" action="/forms/client_form_info.xml" method="post">
+                  <div class="footer-form__input-container"><input class="footer-form__audit-form-input audit-form__input" type="text" id="name" name="user_name" placeholder="Ваше имя"></div>
+                  <div class="footer-form__input-container"><input class="footer-form__audit-form-input audit-form__input" type="tel" id="name" name="user_name" placeholder="Телефон"></div>
+                  <div class="footer-form__input-container">
+                     <button type="submit" class="footer-form__audit-form-button audit-button buttons"><span>Заказать аудит</span>
                   </div>
          </form>
    </div>

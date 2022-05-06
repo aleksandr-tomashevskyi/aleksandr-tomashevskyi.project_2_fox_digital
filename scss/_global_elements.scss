@@ -90,7 +90,7 @@ h3{
 
 
 .audit-form{
-   display: flex;
+   display: grid;
 }
 .audit-form__input{
    width: 60%;
@@ -112,4 +112,115 @@ h3{
 .logo__image{
    height: 100%;
    object-fit: contain;
+}
+
+.popup-window{
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.80);
+   overflow: auto;
+   z-index: 16;
+   display: flex;
+   opacity: 0;
+   // scale: 0;
+   pointer-events: none;
+   transition: opacity 0.3s;
+   justify-content: center;
+   align-items: center;
+}
+.popup-window._active{
+   opacity: 100%;
+   pointer-events: all;
+   // scale: 100%;
+}
+.popup-window__body{
+   position: relative;
+   // height: 60vh;
+   padding: 6vh 6vw;
+   background-color: #fff;
+   border-radius: 20px;
+   align-items: center;
+   margin: 5% 5%;
+   scale: 0;
+   transition: scale 0.3s;
+   @media(max-width: 480px){
+      padding: 4vh 10vw;
+      }
+      @media(orientation: landscape) and (max-height: 412px){ //for mobile landscape
+         padding: 0.5vh 4vw 6vh 4vw;
+         }
+   h2{
+      margin-bottom: 20px;
+      color: $accent;
+      @media(orientation: landscape) and (max-height: 412px){ //for mobile landscape
+         margin: 20px 0 10px 0;
+         }
+   }
+}
+.popup-window__body._active{
+   scale: 100%;
+}
+.popup-window_content-container{
+   margin: 0 auto;
+   text-align: center;
+}
+.popup-audit-form{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-top: 8%;
+   @media(max-width: 480px){
+      grid-template-columns: 1fr;
+      }
+      @media(orientation: landscape) and (max-height: 412px){ //for mobile landscape
+         margin-top: 5%;
+         }
+}
+.popup-audit-form__input-wrapper{
+   &:first-child{
+      @media(min-width: 481px){
+         margin-right: 5px;
+         }
+         @media(max-width: 480px){
+            margin-bottom: 10px;
+            }
+   }
+   &:nth-child(2){
+      @media(min-width: 521px){
+         margin-left: 5px;
+         }
+   }
+   &:last-child{
+      margin-top: 20px;
+      grid-column-start: span 2;
+      @media(max-width: 480px){
+      grid-column-start: auto;
+      }
+   }
+}
+.popup-audit-form__input{
+   width: 100%;
+   box-shadow: $inputFormShadows;
+}
+.popup-audit-form__button{
+   margin: 0 auto;
+}
+.cross-sign{
+   position: absolute;
+   top: 0.7em;
+   right: 0.7em;
+   font-size: $fourtyTwoToTventyFourPx;
+   color: grey;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 400;
+   @media(orientation: landscape) and (max-height: 412px){ //for mobile landscape
+      font-size: 22px;
+      }
+   &:hover{
+      color: $accent;
+      cursor: pointer;
+      font-weight: 600;
+   }
 }
