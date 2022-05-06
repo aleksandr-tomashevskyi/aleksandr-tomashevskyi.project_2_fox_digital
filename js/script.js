@@ -289,4 +289,28 @@ menuIconBlock.addEventListener("click", function(event){
    }
 })
 
+//    Popup window for audit form on the main screen
+const popupWindowAudit = document.querySelector(".popup-window-audit-form");
+const mainScreenButton = document.querySelector(".main-screen__button");
+const popupWindow = document.querySelector(".popup-window");
+const popupWindowBody = popupWindow.firstElementChild;
+mainScreenButton.addEventListener("click", function(event){
+   popupWindowAudit.classList.toggle("_active");
+   popupWindowBody.classList.toggle("_active");
+})
 
+//    Cross sign logic for closing popup windows
+const crossSign = document.querySelector(".cross-sign");
+crossSign.addEventListener("click", function(){
+   popupWindow.classList.toggle("_active");
+   popupWindowBody.classList.toggle("_active");
+})
+
+//    Closing popup when clicked outside of popup body
+
+popupWindow.addEventListener("click", function(event){
+   if(!event.target.closest(".popup-window__body")){
+   popupWindow.classList.toggle("_active");
+   popupWindowBody.classList.toggle("_active");
+   }
+})
