@@ -139,13 +139,18 @@ h3{
 .popup-window__body{
    position: relative;
    // height: 60vh;
-   padding: 6vh 6vw;
    background-color: #fff;
    border-radius: 20px;
    align-items: center;
    margin: 5% 5%;
    scale: 0;
    transition: scale 0.3s;
+   @media(orientation: portrait){
+      padding: 6vw 6vw;
+   }
+   @media(orientation: landscape){
+      padding: 6vh 6vw;
+   }
    @media(max-width: 480px){
       padding: 4vh 10vw;
       }
