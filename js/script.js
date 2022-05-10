@@ -1,7 +1,6 @@
 "use strict"
 // how to read: comments on top, actions below
 
-console.log('hello world!');
 
 //       Slider code start
 
@@ -9,18 +8,13 @@ console.log('hello world!');
 const radioSwitcherBlock = document.querySelector(".slider__radio-buttons-block");
 // getting collection of objects of radio buttons
 const radioSwitcherCollection = radioSwitcherBlock.children;
-console.log(radioSwitcherCollection, typeof(radioSwitcherCollection));
 // getting values of each radio button (accessing)
 const radioKeys = Object.values(radioSwitcherCollection);
 // getting colection of objects of images stored in right block
 const imagesCollectionBlock = document.querySelector(".slider-block");
-console.log("This is the imagesCollectionBlock: ", imagesCollectionBlock);
 const imagesCollection = imagesCollectionBlock.children;
-console.log('getting imagesCollection - succesfull');
 // accesing each image in the object and storing it in a collections
 const imagesCollectionValues = Object.values(imagesCollection);
-console.log(imagesCollectionValues);
-console.log("This is radioKeys: ",radioKeys)
 // setting variable to store number of current checked button
 let currentSelection;
 // getting information about which button is checked after loading the page
@@ -47,7 +41,6 @@ radioKeys.forEach(function(item, i){
          imagesCollectionValues[i+1].classList.add("active-bottom");
          imagesCollectionValues[i+2].classList.add("inactive-bottom");
       } else if(i == (imagesCollectionValues.length-2)){
-         console.log('check')
          imagesCollectionValues[i-2].classList.add("inactive-top");
          imagesCollectionValues[i-1].classList.add("active-top");
          imagesCollectionValues[i].classList.add("active");
@@ -61,8 +54,6 @@ radioKeys.forEach(function(item, i){
       }
    }
 })
-console.log('setting current selection after loading - succesful', 'current selection is:', currentSelection);
-console.log('length of collection: ', imagesCollectionValues.length)
 //function for removing classes
 function removeCurrentClasses(){
    if(currentSelection == 0){
@@ -108,7 +99,6 @@ function sliderChange(){
             imagesCollectionValues[i].classList.add("active");
             imagesCollectionValues[i+1].classList.add("active-bottom");
             imagesCollectionValues[i+2].classList.add("inactive-bottom");
-            console.log("code for 'zero' section initialized");
             // remembering new selection
             currentSelection = i;
       } else if(i == (imagesCollectionValues.length-1)){
@@ -119,8 +109,6 @@ function sliderChange(){
          imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[0].classList.add("active-bottom");//for 'infinite' effect
          imagesCollectionValues[1].classList.add("inactive-bottom");//for 'infinite' effect
-         console.log("code for 'end' section initialized");
-         console.log("new selection is: ", i);
          currentSelection = i;
       } else if(i == 1){
          removeCurrentClasses();
@@ -128,7 +116,6 @@ function sliderChange(){
          imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[i+1].classList.add("active-bottom");
          imagesCollectionValues[i+2].classList.add("inactive-bottom");
-         console.log("new selection is: ", i);
          currentSelection = i;
       } else if(i == (imagesCollectionValues.length-2)){
          removeCurrentClasses();
@@ -136,7 +123,6 @@ function sliderChange(){
          imagesCollectionValues[i-1].classList.add("active-top");
          imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[i+1].classList.add("active-bottom");
-         console.log("new selection is: ", i);
          currentSelection = i;
       }
       else {
@@ -146,8 +132,6 @@ function sliderChange(){
          imagesCollectionValues[i].classList.add("active");
          imagesCollectionValues[i+1].classList.add("active-bottom");
          imagesCollectionValues[i+2].classList.add("inactive-bottom");
-         console.log("code for 'middle' section initialized");
-         console.log("new selection is: ", i);
          currentSelection = i;
       }
    };
@@ -160,7 +144,6 @@ radioSwitcherBlock.addEventListener("click", function(event){
       sliderChange(); //calling main function for slider
    }
 });
-
 //Code block for clickable top and bottom slide start
 // setting event listener for click on slide
 document.querySelector(".slider-block").addEventListener("click", function(event){
@@ -208,32 +191,25 @@ const menuItemCollection = document.querySelectorAll(".navigation__link[data-got
 const sectionItemCollection = document.querySelectorAll("section");
 
 
-
 //       Scroll to ancor function
 let navItemClickedVar;
 let bodyScrollDisableFlag = false;
 function ancorScrollFunc(navItemClickedVar, event){
-   console.log("here is the event: ", event)
    event.preventDefault();
    const ancorElement = document.querySelector(`${navItemClickedVar}`);
-   console.log("Element distance: ", ancorElement.offsetTop)
-   console.log('Here is the ancor element: ', ancorElement);
    window.scrollTo({top: (`${ancorElement.offsetTop}` - 80), behavior: 'smooth'});
    document.querySelector(".navigation__body").classList.remove("navigation__body_active");
    if(bodyScrollDisableFlag){
       document.body.style.overflow = 'auto';
       bodyScrollDisableFlag = false;
       }
-   console.log("ScrollFunctionCheck - successfull");
 };
 
 document.querySelector(".navigation__list-block").addEventListener('click', (event) => {
    if(event.target.closest('.navigation__list-item')){
       navItemClickedVar = event.target.getAttribute('data-goto');
-      console.log("Just checking the dataset function: ",event.target.dataset.goto)
       if(navItemClickedVar && document.querySelector(`${navItemClickedVar}`)){ //checking if the attribute has any value
          ancorScrollFunc(navItemClickedVar, event); //transfering target and event into a function
-         console.log("retrieved ancor name: ", navItemClickedVar);
       }
    }
 })
@@ -263,8 +239,6 @@ if(lastKnownScrollPosition == 0){ // checking if scroll position shifted from 0
 else{
    headerBlockItem.classList.add("header_active");
 };
-console.log("Header BlockItem: ", headerBlockItem);
-console.log("Scroll: ", lastKnownScrollPosition);
 window.addEventListener("scroll", function(event){
    lastKnownScrollPosition = window.pageYOffset;
    if(lastKnownScrollPosition == 0){ // checking if scroll position shifted from 0
@@ -299,7 +273,7 @@ mainScreenButton.addEventListener("click", function(event){
    popupWindowBody.classList.toggle("_active");
 })
 
-//    Cross sign logic for closing popup windows
+//    Cross sign for closing popup windows
 const crossSign = document.querySelector(".cross-sign");
 crossSign.addEventListener("click", function(){
    popupWindow.classList.toggle("_active");
