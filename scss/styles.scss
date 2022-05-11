@@ -30,6 +30,9 @@ body{
    font-size: 18px;
    padding: 10px 0;
 }
+.header__logo{
+   cursor: pointer;
+}
 .navigation{
    display: flex;
    justify-content: flex-end;

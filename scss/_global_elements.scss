@@ -108,6 +108,12 @@ h3{
    flex: 1 1 10%;
    height: 2.5em;
    z-index: 12;
+   svg{
+      fill: #FCFCFC;
+      &:hover{
+         fill: $accentTwo;
+      }
+   }
 }
 .logo__image{
    height: 100%;
@@ -216,15 +222,15 @@ h3{
    position: absolute;
    top: 0.7em;
    right: 0.7em;
-   font-size: $fourtyTwoToTventyFourPx;
+   font-size: $thirtyEightToTventyTwoPx;
    color: grey;
    font-family: 'Raleway', sans-serif;
    font-weight: 400;
    @media(orientation: landscape) and (max-height: 412px){ //for mobile landscape
-      font-size: 22px;
+      font-size: $thirtyEightToTventyTwoPx;
       }
    &:hover{
-      color: $accent;
+      color: $accentTwo;
       cursor: pointer;
       font-weight: 600;
    }

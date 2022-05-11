@@ -1,7 +1,7 @@
 //Calculation of used font sizes for adaptive design
 $seventyFiveToThirtyPx: calc(30px + (75 - 30)*((100vw - 320px) / (1920 - 320))); //75px to 30px
 $fourtySixToTventyEightPx: calc(28px + (46 - 28)*((100vw - 320px) / (1920 - 320))); //75px to 30px
-$fourtyTwoToTventyFourPx: calc(24px + (42 - 24)*((100vw - 320px) / (1920 - 320))); //75px to 30px
+$thirtyEightToTventyTwoPx: calc(22px + (38 - 22)*((100vw - 320px) / (1920 - 320))); //38px to 22px
 $twentySixToEighteenPx: calc(18px + (26 - 18)*((100vw - 320px) / (1920 - 320))); //26px to 18px
 $twentySixToTwelvePx: calc(12px + (26 - 12)*((100vw - 480px) / (1920 - 480))); //26px to 18px
 $twentyToFefteenPx: calc(15px + (22 - 15)*((100vw - 320px) / (1920 - 320))); //20px to 15px
@@ -10,6 +10,7 @@ $twentyTwoToFourteenPx: calc(14px + (22 - 14)*((100vw - 320px) / (480 - 320))); 
 
 // colors
 $accent: #1F7CE3;
+$accentTwo: #F24530;
 
 // forms
 $inputFormShadows: 2px 0 7px 0 rgba(0, 0, 0, 0.3), -2px 0 7px 0 rgba(0, 0, 0, 0.3);
