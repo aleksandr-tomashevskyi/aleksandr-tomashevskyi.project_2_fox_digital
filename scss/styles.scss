@@ -171,7 +171,7 @@ body{
 
 .main-screen{
    margin-bottom: 5vw;
-   background: url(../img/picture_main_page_background_dark.png), no-repeat;
+   background: url(../img/picture_main_page_background_dark.webp), no-repeat;
    background-size: cover;
    background-origin: padding-box;
    background-position: left bottom;
@@ -442,7 +442,7 @@ body{
    margin: 5vw 0; //needed for edge shadows
    overflow: hidden; //preventing showing pictures out of required zone
    box-shadow: 0 -5px 10px rgba(221, 219, 219, 0.90), 0 5px 10px rgba(221, 219, 219, 0.90);
-   background: url(../img/picture_projects_page_background_dark.png);
+   background: url(../img/picture_projects_page_background_dark.webp);
    background-size: cover;
 }
 .our-projects__container{
@@ -1045,7 +1045,7 @@ body{
 }
 .our-clients-cards-block{
    padding-bottom: 10vw;
-   background: url(../img/picture_background_footer.png), no-repeat;
+   background: url(../img/picture_background_footer.webp), no-repeat;
    background-size: cover;
    background-position: left bottom;
 }
