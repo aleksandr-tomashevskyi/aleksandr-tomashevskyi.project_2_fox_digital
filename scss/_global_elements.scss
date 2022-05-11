@@ -47,6 +47,10 @@ h3{
    border-radius: 20px;
    background: linear-gradient(to right, $accent, #0085FF);
    letter-spacing: 0.05em;
+   color: #ffff;
+   transition: 0.3s all;
+   box-shadow: 2px 2px 5px 0 rgb(63, 63, 63);
+   
    &::after{
       display: block;
       width: 1.2em;
@@ -60,10 +64,13 @@ h3{
       background-size: contain;
       background-repeat: no-repeat;
    }
+   &:hover{
+      background: linear-gradient(to right, #1a67be, #002f5a);
+      box-shadow: 0px 0px 0px 0 rgb(63, 63, 63);
+   }
    span{
       font-family: inherit;
       font-weight: 600;
-      color: #ffff;
    }
 }
 
@@ -111,7 +118,7 @@ h3{
    svg{
       fill: #FCFCFC;
       &:hover{
-         fill: $accentTwo;
+         fill: $accent;
       }
    }
 }
@@ -230,7 +237,7 @@ h3{
       font-size: $thirtyEightToTventyTwoPx;
       }
    &:hover{
-      color: $accentTwo;
+      color: $accent;
       cursor: pointer;
       font-weight: 600;
    }

@@ -60,15 +60,6 @@ body{
       }
    }
 }
-.navigation__list-block{
-   @media(max-width: 1024px){
-   // position: relative;
-   // top: 50%;
-   // left: 50%;
-   // transform: translate(-50%, -50%);
-   }
-   // display: none;
-}
 .navigation__list-item{
    color: #fff;
    display: inline;
@@ -263,9 +254,11 @@ body{
    @media(max-width: 1024px){
       width: 100%;
    }
+   &:hover{
+      background-color: rgb(230, 230, 230);
+      // color: white;
+   }
 }
-
-
 
 
 .about{
@@ -457,18 +450,7 @@ body{
    @media(max-width: 767px){
       flex-direction: column;
    }
-   // .our-projects__column--middle{
-   //    flex: 0 0 1%;
-   //    display: none;
-   //    flex-direction: column;
-   //    justify-content: center;
-   //    margin: 0 1vw 0 3vw;
-
-   // }
 }
-// .our-projects__column{
-//    border: solid red;
-// }
 .our-projects__column--right{
    flex: 0 1 59.5%;
    display: flex;
