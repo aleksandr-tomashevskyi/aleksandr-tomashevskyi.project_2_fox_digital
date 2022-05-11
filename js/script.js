@@ -288,3 +288,34 @@ popupWindow.addEventListener("click", function(event){
    popupWindowBody.classList.toggle("_active");
    }
 })
+
+//     Lazy-loading
+const lazyImages = document.querySelectorAll('img[data-src],video[data-src]');
+const windowHeight = document.documentElement.clientHeight;
+let lazyImagesPosition = [];
+if (lazyImages.length > 0){ //checking if data-src objects will exist
+   lazyImages.forEach((item, i)=>{
+      if(item.dataset.src){ //checking if the attribute is filled in
+         lazyImagesPosition.push(item.getBoundingClientRect().top + window.scrollY);
+         lazyScrollCheck()
+      }
+   })
+}
+function lazyScrollCheck(){
+   let lazyImageIndex = lazyImagesPosition.findIndex(
+      item => window.scrollY > item - windowHeight
+   );
+   if (lazyImageIndex >= 0){
+      if (lazyImages[lazyImageIndex].dataset.src){
+         lazyImages[lazyImageIndex].src = lazyImages[lazyImageIndex].dataset.src;
+         lazyImages[lazyImageIndex].removeAttribute('data-src');
+      }
+      delete lazyImagesPosition[lazyImageIndex]
+   }
+}
+function lazyScroll(){
+   if(document.querySelectorAll('img[data-src],video[data-src]').length > 0){
+      lazyScrollCheck();
+   }
+}
+document.addEventListener("scroll", lazyScroll);

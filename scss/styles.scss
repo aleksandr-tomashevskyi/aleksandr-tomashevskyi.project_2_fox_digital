@@ -277,7 +277,12 @@ body{
 }
 .about__column-left{
    margin-right: 5%;
-   flex: 1 1 auto;
+   flex: 1 1 60%;
+   background: url(../img/loader.svg), no-repeat;
+   background-size: 20%;
+   background-origin: padding-box;
+   background-position: center center;
+   background-repeat: no-repeat;
    @media(max-width: 1024px){
       display: none;
    }
@@ -509,6 +514,11 @@ body{
       position: absolute;
       top: 0vw;
       left: 0vw;
+      background: url(../img/loader.svg), no-repeat;
+      background-size: 20%;
+      background-origin: padding-box;
+      background-position: center center;
+      background-repeat: no-repeat;
       @media(max-width: 767px){
          width: 70%;
          margin: 0 auto;
@@ -854,6 +864,11 @@ body{
       // min-width: 500px;
       overflow: hidden;
       border-radius: 25px;
+      background: url(../img/loader.svg), no-repeat;
+      background-size: 20%;
+      background-origin: padding-box;
+      background-position: center center;
+      background-repeat: no-repeat;
       video{
          width: 100%;
       }
